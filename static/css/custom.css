@@ -1,0 +1,202 @@
+/* ============================================
+   ORYGIN Kampus — Custom CSS
+   Complément à Tailwind pour les effets avancés
+   ============================================ */
+
+/* --- Scroll reveal --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+
+/* --- Gradient text --- */
+.text-gradient-coral {
+  background: linear-gradient(135deg, #F44336, #FFCC33);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-caraibe {
+  background: linear-gradient(135deg, #04D2DF, #9C27B0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Blob shapes --- */
+.blob {
+  border-radius: 62% 38% 52% 48% / 45% 55% 45% 55%;
+}
+
+.blob-2 {
+  border-radius: 40% 60% 70% 30% / 50% 40% 60% 50%;
+}
+
+/* --- Section divider waves --- */
+.wave-top {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+/* --- Card hover lift --- */
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(30, 42, 54, 0.14);
+}
+
+/* --- Navbar active link --- */
+.nav-active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 3px;
+  background: #F44336;
+  border-radius: 2px;
+}
+
+/* --- Navbar scroll behavior --- */
+.navbar-scrolled {
+  background: rgba(30, 42, 54, 0.97) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Stats counter --- */
+.stat-number {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Colored border cards --- */
+.card-accent-left {
+  border-left: 4px solid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-accent-left:hover {
+  transform: translateX(4px);
+}
+
+/* --- Progress bar animation --- */
+@keyframes grow-width {
+  from { width: 0%; }
+  to   { width: var(--target-width); }
+}
+
+.animate-grow {
+  animation: grow-width 1.5s ease-out forwards;
+}
+
+/* --- Floating shapes in hero --- */
+@keyframes float-a {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes float-b {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-14px) rotate(-4deg); }
+}
+
+.shape-float-a { animation: float-a 7s ease-in-out infinite; }
+.shape-float-b { animation: float-b 9s ease-in-out infinite; }
+
+/* --- Testimonial quote mark --- */
+.quote-mark {
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  line-height: 0.8;
+  color: currentColor;
+  opacity: 0.15;
+}
+
+/* --- Partner logo grayscale --- */
+.partner-logo {
+  filter: grayscale(100%) opacity(0.5);
+  transition: filter 0.3s ease;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
+/* --- Focus styles (accessibility) --- */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #04D2DF;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* --- Smooth scroll --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Custom scrollbar --- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F5F5F5; }
+::-webkit-scrollbar-thumb { background: #1E2A36; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #F44336; }
