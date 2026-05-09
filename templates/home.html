@@ -55,14 +55,14 @@
         </p>
 
         <div class="flex flex-wrap gap-4 mb-12">
-          <a href="#parcours"
+          <a href="{% url 'home:parcours' %}"
              class="inline-flex items-center gap-2.5 bg-coral hover:bg-red-600 text-white font-heading font-bold px-7 py-3.5 rounded-full transition-all duration-200 hover:shadow-coral hover:scale-105">
             Découvrir nos parcours
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>
           </a>
-          <a href="#contact"
+          <a href="{% url 'home:contact' %}"
              class="inline-flex items-center gap-2.5 bg-transparent border-2 border-white/20 hover:border-caraibe text-white hover:text-caraibe font-heading font-bold px-7 py-3.5 rounded-full transition-all duration-200 hover:bg-caraibe/5">
             Candidater maintenant
           </a>
@@ -123,7 +123,7 @@
             Certifié Qualiopi
           </div>
           <div class="absolute top-1/2 left-0 bg-coral/20 border border-coral/30 text-coral font-heading font-semibold text-xs px-3 py-1.5 rounded-full shape-float-a">
-            10 ans d'expertise
+            12 ans d'expertise
           </div>
         </div>
       </div>
@@ -134,313 +134,6 @@
     <span class="font-body text-xs uppercase tracking-widest">Découvrir</span>
     <div class="w-5 h-8 border border-white/20 rounded-full flex items-start justify-center p-1">
       <div class="w-1 h-2 bg-white/40 rounded-full animate-bounce"></div>
-    </div>
-  </div>
-</section>
-
-
-<section id="mission" class="py-24 bg-orygin-light" aria-labelledby="mission-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 reveal">
-      <span class="inline-block font-heading font-semibold text-coral text-sm uppercase tracking-widest mb-3">Qui sommes-nous</span>
-      <h2 id="mission-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">
-        Notre mission &amp; nos valeurs
-      </h2>
-      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto leading-relaxed">
-        Nous croyons en chaque personne. ORYGIN Kampus agit au cœur de la Guyane pour transformer les parcours de vie grâce à la formation et à l'accompagnement.
-      </p>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <article class="group bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover card-lift border border-orygin-dark/5 reveal delay-100">
-        <div class="w-14 h-14 bg-coral/10 group-hover:bg-coral/20 rounded-2xl flex items-center justify-center mb-5 transition-colors duration-300">
-          <svg class="w-7 h-7 text-coral" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-          </svg>
-        </div>
-        <div class="w-8 h-1 bg-coral rounded-full mb-4 group-hover:w-12 transition-all duration-300"></div>
-        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Inclusion</h3>
-        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed">
-          Nous accueillons chaque profil sans discrimination. Diversité, équité et appartenance sont au cœur de notre démarche.
-        </p>
-      </article>
-
-      <article class="group bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover card-lift border border-orygin-dark/5 reveal delay-200">
-        <div class="w-14 h-14 bg-solar/20 group-hover:bg-solar/30 rounded-2xl flex items-center justify-center mb-5 transition-colors duration-300">
-          <svg class="w-7 h-7 text-yellow-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
-          </svg>
-        </div>
-        <div class="w-8 h-1 bg-solar rounded-full mb-4 group-hover:w-12 transition-all duration-300"></div>
-        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Excellence</h3>
-        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed">
-          Des formations de qualité, certifiées Qualiopi, dispensées par des formateurs expérimentés et engagés.
-        </p>
-      </article>
-
-      <article class="group bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover card-lift border border-orygin-dark/5 reveal delay-300">
-        <div class="w-14 h-14 bg-nature/10 group-hover:bg-nature/20 rounded-2xl flex items-center justify-center mb-5 transition-colors duration-300">
-          <svg class="w-7 h-7 text-nature" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-        </div>
-        <div class="w-8 h-1 bg-nature rounded-full mb-4 group-hover:w-12 transition-all duration-300"></div>
-        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Territoire</h3>
-        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed">
-          Enracinés en Guyane, nous agissons localement pour un impact durable sur le tissu économique et social du territoire.
-        </p>
-      </article>
-
-      <article class="group bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover card-lift border border-orygin-dark/5 reveal delay-400">
-        <div class="w-14 h-14 bg-creative/10 group-hover:bg-creative/20 rounded-2xl flex items-center justify-center mb-5 transition-colors duration-300">
-          <svg class="w-7 h-7 text-creative" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-          </svg>
-        </div>
-        <div class="w-8 h-1 bg-creative rounded-full mb-4 group-hover:w-12 transition-all duration-300"></div>
-        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Innovation</h3>
-        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed">
-          Des méthodes pédagogiques modernes, des outils numériques et une veille permanente sur les métiers de demain.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-<section id="parcours" class="py-24 bg-white" aria-labelledby="parcours-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 reveal">
-      <span class="inline-block font-heading font-semibold text-caraibe text-sm uppercase tracking-widest mb-3">Notre méthode</span>
-      <h2 id="parcours-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">
-        Un parcours en 4 leviers
-      </h2>
-      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto leading-relaxed">
-        Une approche globale et progressive qui accompagne chaque bénéficiaire de l'orientation jusqu'à l'emploi durable.
-      </p>
-    </div>
-
-    <div class="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-6">
-
-      <article class="group relative bg-orygin-light hover:bg-coral rounded-3xl p-8 transition-all duration-500 card-lift cursor-default reveal delay-100">
-        <div class="mb-6 flex items-start justify-between">
-          <span class="font-heading font-black text-6xl text-coral/10 group-hover:text-white/15 transition-colors leading-none">01</span>
-          <div class="w-12 h-12 bg-coral/10 group-hover:bg-white/20 rounded-2xl flex items-center justify-center transition-colors">
-            <svg class="w-6 h-6 text-coral group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
-            </svg>
-          </div>
-        </div>
-        <h3 class="font-heading font-bold text-orygin-dark group-hover:text-white text-xl mb-3 transition-colors">Orientation &amp; Diagnostic</h3>
-        <p class="text-orygin-dark/60 group-hover:text-white/80 font-body text-sm leading-relaxed transition-colors">
-          Évaluation des compétences, identification des besoins et co-construction d'un projet professionnel réaliste et motivant.
-        </p>
-        <div class="mt-6 flex items-center gap-2 text-coral group-hover:text-white transition-colors">
-          <span class="font-heading font-semibold text-xs uppercase tracking-wider">Phase 1</span>
-          <div class="flex-1 h-px bg-coral/20 group-hover:bg-white/30"></div>
-        </div>
-      </article>
-
-      <article class="group relative bg-orygin-light hover:bg-solar rounded-3xl p-8 transition-all duration-500 card-lift cursor-default reveal delay-200">
-        <div class="mb-6 flex items-start justify-between">
-          <span class="font-heading font-black text-6xl text-solar/20 group-hover:text-orygin-dark/15 transition-colors leading-none">02</span>
-          <div class="w-12 h-12 bg-solar/20 group-hover:bg-orygin-dark/10 rounded-2xl flex items-center justify-center transition-colors">
-            <svg class="w-6 h-6 text-yellow-500 group-hover:text-orygin-dark transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
-          </div>
-        </div>
-        <h3 class="font-heading font-bold text-orygin-dark group-hover:text-orygin-dark text-xl mb-3 transition-colors">Formation &amp; Compétences</h3>
-        <p class="text-orygin-dark/60 group-hover:text-orygin-dark/80 font-body text-sm leading-relaxed transition-colors">
-          Programmes de formation modulaires, adaptés au marché local et aux standards nationaux, en présentiel ou à distance.
-        </p>
-        <div class="mt-6 flex items-center gap-2 text-yellow-600 group-hover:text-orygin-dark transition-colors">
-          <span class="font-heading font-semibold text-xs uppercase tracking-wider">Phase 2</span>
-          <div class="flex-1 h-px bg-solar/30 group-hover:bg-orygin-dark/20"></div>
-        </div>
-      </article>
-
-      <article class="group relative bg-orygin-light hover:bg-caraibe rounded-3xl p-8 transition-all duration-500 card-lift cursor-default reveal delay-300">
-        <div class="mb-6 flex items-start justify-between">
-          <span class="font-heading font-black text-6xl text-caraibe/15 group-hover:text-white/15 transition-colors leading-none">03</span>
-          <div class="w-12 h-12 bg-caraibe/10 group-hover:bg-white/20 rounded-2xl flex items-center justify-center transition-colors">
-            <svg class="w-6 h-6 text-caraibe group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-        </div>
-        <h3 class="font-heading font-bold text-orygin-dark group-hover:text-white text-xl mb-3 transition-colors">Insertion Professionnelle</h3>
-        <p class="text-orygin-dark/60 group-hover:text-white/80 font-body text-sm leading-relaxed transition-colors">
-          Mise en relation avec les employeurs partenaires, coaching entretiens, aide à la rédaction de CV et lettres de motivation.
-        </p>
-        <div class="mt-6 flex items-center gap-2 text-caraibe group-hover:text-white transition-colors">
-          <span class="font-heading font-semibold text-xs uppercase tracking-wider">Phase 3</span>
-          <div class="flex-1 h-px bg-caraibe/20 group-hover:bg-white/30"></div>
-        </div>
-      </article>
-
-      <article class="group relative bg-orygin-light hover:bg-nature rounded-3xl p-8 transition-all duration-500 card-lift cursor-default reveal delay-400">
-        <div class="mb-6 flex items-start justify-between">
-          <span class="font-heading font-black text-6xl text-nature/15 group-hover:text-white/15 transition-colors leading-none">04</span>
-          <div class="w-12 h-12 bg-nature/10 group-hover:bg-white/20 rounded-2xl flex items-center justify-center transition-colors">
-            <svg class="w-6 h-6 text-nature group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-        </div>
-        <h3 class="font-heading font-bold text-orygin-dark group-hover:text-white text-xl mb-3 transition-colors">Suivi Post-Insertion</h3>
-        <p class="text-orygin-dark/60 group-hover:text-white/80 font-body text-sm leading-relaxed transition-colors">
-          Accompagnement continu 6 mois après l'embauche pour assurer la stabilité en poste et prévenir les ruptures de parcours.
-        </p>
-        <div class="mt-6 flex items-center gap-2 text-nature group-hover:text-white transition-colors">
-          <span class="font-heading font-semibold text-xs uppercase tracking-wider">Phase 4</span>
-          <div class="flex-1 h-px bg-nature/20 group-hover:bg-white/30"></div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-
-<section id="offres" class="py-24 bg-orygin-light" aria-labelledby="offres-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 reveal">
-      <span class="inline-block font-heading font-semibold text-nature text-sm uppercase tracking-widest mb-3">Ce que nous proposons</span>
-      <h2 id="offres-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">
-        Nos offres de formation
-      </h2>
-      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto leading-relaxed">
-        Trois gammes d'accompagnement complémentaires pour couvrir tous les besoins du territoire guyanais.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <article class="bg-white rounded-3xl overflow-hidden shadow-card hover:shadow-card-hover card-lift reveal delay-100">
-        <div class="h-3 bg-coral"></div>
-        <div class="p-8">
-          <div class="w-14 h-14 bg-coral/10 rounded-2xl flex items-center justify-center mb-5">
-            <svg class="w-7 h-7 text-coral" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-            </svg>
-          </div>
-          <h3 class="font-heading font-bold text-orygin-dark text-xl mb-2">Accompagnement</h3>
-          <p class="text-coral font-heading font-semibold text-sm mb-4 uppercase tracking-wide">À l'emploi &amp; à l'entrepreneuriat</p>
-          <p class="text-orygin-dark/60 font-body text-sm leading-relaxed mb-6">
-            Un suivi personnalisé pour construire votre projet professionnel, développer vos compétences et accéder à l'emploi ou créer votre activité.
-          </p>
-          <ul class="space-y-2.5 mb-8" role="list">
-            <li class="flex items-center gap-2.5 text-orygin-dark/70 font-body text-sm">
-              <svg class="w-4 h-4 text-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Bilan de compétences approfondi
-            </li>
-            <li class="flex items-center gap-2.5 text-orygin-dark/70 font-body text-sm">
-              <svg class="w-4 h-4 text-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Coaching individuel hebdomadaire
-            </li>
-            <li class="flex items-center gap-2.5 text-orygin-dark/70 font-body text-sm">
-              <svg class="w-4 h-4 text-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Accès au réseau d'employeurs partenaires
-            </li>
-            <li class="flex items-center gap-2.5 text-orygin-dark/70 font-body text-sm">
-              <svg class="w-4 h-4 text-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Atelier CV, lettre &amp; simulation d'entretien
-            </li>
-          </ul>
-          <a href="#contact" class="inline-flex items-center gap-2 text-coral font-heading font-bold text-sm group">
-            En savoir plus
-            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-        </div>
-      </article>
-
-      <article class="bg-orygin-dark rounded-3xl overflow-hidden shadow-card hover:shadow-card-hover card-lift relative reveal delay-200">
-        <div class="h-3 bg-nature"></div>
-        <div class="absolute top-6 right-6">
-          <span class="bg-solar text-orygin-dark font-heading font-black text-xs px-3 py-1 rounded-full uppercase tracking-wide">Populaire</span>
-        </div>
-        <div class="p-8">
-          <div class="w-14 h-14 bg-nature/20 rounded-2xl flex items-center justify-center mb-5">
-            <svg class="w-7 h-7 text-nature" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
-            </svg>
-          </div>
-          <h3 class="font-heading font-bold text-white text-xl mb-2">FLE</h3>
-          <p class="text-nature font-heading font-semibold text-sm mb-4 uppercase tracking-wide">Français Langue Étrangère</p>
-          <p class="text-white/60 font-body text-sm leading-relaxed mb-6">
-            Cours de français adaptés aux primo-arrivants et aux personnes en situation de multilinguisme, du niveau A1 au B2 (DELF/DALF).
-          </p>
-          <ul class="space-y-2.5 mb-8" role="list">
-            <li class="flex items-center gap-2.5 text-white/70 font-body text-sm">
-              <svg class="w-4 h-4 text-nature flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Niveaux A1 à B2 — toutes origines
-            </li>
-            <li class="flex items-center gap-2.5 text-white/70 font-body text-sm">
-              <svg class="w-4 h-4 text-nature flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Préparation aux certifications DELF/DALF
-            </li>
-            <li class="flex items-center gap-2.5 text-white/70 font-body text-sm">
-              <svg class="w-4 h-4 text-nature flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Français professionnel et de la vie quotidienne
-            </li>
-            <li class="flex items-center gap-2.5 text-white/70 font-body text-sm">
-              <svg class="w-4 h-4 text-nature flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Pédagogie interculturelle adaptée
-            </li>
-          </ul>
-          <a href="#contact" class="inline-flex items-center gap-2 text-nature font-heading font-bold text-sm group">
-            En savoir plus
-            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-        </div>
-      </article>
-
-      <article class="bg-white rounded-3xl overflow-hidden shadow-card hover:shadow-card-hover card-lift reveal delay-300">
-        <div class="h-3 bg-creative"></div>
-        <div class="p-8">
-          <div class="w-14 h-14 bg-creative/10 rounded-2xl flex items-center justify-center mb-5">
-            <svg class="w-7 h-7 text-creative" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 14l9-5-9-5-9 5 9 5z"/>
-              <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-            </svg>
-          </div>
-          <h3 class="font-heading font-bold text-orygin-dark text-xl mb-2">Formations supérieures</h3>
-          <p class="text-creative font-heading font-semibold text-sm mb-4 uppercase tracking-wide">Bac+2 à Bac+5 en partenariat</p>
-          <p class="text-orygin-dark/60 font-body text-sm leading-relaxed mb-6">
-            Des parcours diplômants accessibles en Guyane grâce à nos partenariats avec des établissements d'enseignement supérieur.
-          </p>
-          <ul class="space-y-2.5 mb-8" role="list">
-            <li class="flex items-center gap-2.5 text-orygin-dark/70 font-body text-sm">
-              <svg class="w-4 h-4 text-creative flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Licences professionnelles &amp; Masters
-            </li>
-            <li class="flex items-center gap-2.5 text-orygin-dark/70 font-body text-sm">
-              <svg class="w-4 h-4 text-creative flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Formations en alternance et VAE
-            </li>
-            <li class="flex items-center gap-2.5 text-orygin-dark/70 font-body text-sm">
-              <svg class="w-4 h-4 text-creative flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Management, RH, santé, numérique
-            </li>
-            <li class="flex items-center gap-2.5 text-orygin-dark/70 font-body text-sm">
-              <svg class="w-4 h-4 text-creative flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Financement CPF, France Travail, OPCO
-            </li>
-          </ul>
-          <a href="#contact" class="inline-flex items-center gap-2 text-creative font-heading font-bold text-sm group">
-            En savoir plus
-            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-        </div>
-      </article>
-
     </div>
   </div>
 </section>
@@ -505,7 +198,7 @@
           </svg>
         </div>
         <p class="font-heading font-black text-5xl text-white mb-2">
-          <span class="counter stat-number" data-target="10">0</span><span class="text-nature"> ans</span>
+          <span class="counter stat-number" data-target="12">0</span><span class="text-nature"> ans</span>
         </p>
         <p class="text-white/60 font-body text-sm leading-tight">D'expertise sur<br>le territoire</p>
       </div>
@@ -514,255 +207,88 @@
 </section>
 
 
-<section id="trajectoire" class="py-24 bg-orygin-light" aria-labelledby="trajectoire-heading">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-24 bg-orygin-light" aria-labelledby="overview-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 reveal">
-      <span class="inline-block font-heading font-semibold text-coral text-sm uppercase tracking-widest mb-3">Notre trajectoire</span>
-      <h2 id="trajectoire-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">
-        12 ans de construction
+      <span class="inline-block font-heading font-semibold text-caraibe text-sm uppercase tracking-widest mb-3">Tout ce que nous faisons</span>
+      <h2 id="overview-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">
+        ORYGIN Kampus en un coup d'œil
       </h2>
-      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto leading-relaxed">
-        De la création d'ORYGIN en 2012 à l'émergence d'ORYGIN Kampus, une décennie de croissance au service de la Guyane.
+      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto">
+        Quatre domaines d'action complémentaires pour un accompagnement complet, de l'orientation jusqu'à l'emploi durable.
       </p>
     </div>
 
-    <div class="relative">
-      <div class="absolute left-6 sm:left-1/2 top-0 bottom-0 w-px" style="background: linear-gradient(to bottom, #F44336, #FFCC33);" aria-hidden="true"></div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <div class="space-y-10">
-        {% for milestone in milestones %}
-        <div class="reveal relative flex gap-6 sm:gap-0 {% if forloop.counter0|divisibleby:2 %}sm:flex-row{% else %}sm:flex-row-reverse{% endif %}">
-          <div class="sm:w-1/2 {% if forloop.counter0|divisibleby:2 %}sm:pr-12 sm:text-right{% else %}sm:pl-12{% endif %} pl-14 sm:pl-0">
-            <div class="bg-white rounded-2xl p-5 shadow-card">
-              <span class="font-heading font-bold text-coral text-sm">{{ milestone.year }}</span>
-              <h3 class="font-heading font-bold text-orygin-dark text-base mt-1 mb-2">{{ milestone.title }}</h3>
-              <p class="font-body text-sm text-orygin-dark/60 leading-relaxed">{{ milestone.desc }}</p>
-            </div>
-          </div>
-          <div class="absolute left-4 sm:left-1/2 top-5 -translate-x-1/2 timeline-dot" aria-hidden="true"></div>
-          <div class="hidden sm:block sm:w-1/2" aria-hidden="true"></div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section id="partenaires" class="py-24 bg-white" aria-labelledby="partenaires-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 reveal">
-      <span class="inline-block font-heading font-semibold text-creative text-sm uppercase tracking-widest mb-3">Ils nous font confiance</span>
-      <h2 id="partenaires-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">
-        Nos partenaires
-      </h2>
-      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto leading-relaxed">
-        Un réseau d'institutions, d'entreprises et d'organismes qui croient en notre mission et soutiennent l'insertion professionnelle en Guyane.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 mb-12 reveal">
-      {% for i in "abcdefghijkl" %}
-      <div class="flex items-center justify-center h-20 bg-orygin-light rounded-2xl border border-orygin-dark/5 partner-logo hover:shadow-card transition-all duration-300">
-        <div class="text-center px-3">
-          <div class="w-10 h-10 mx-auto bg-orygin-dark/10 rounded-full mb-1"></div>
-          <div class="w-16 h-2 mx-auto bg-orygin-dark/10 rounded-full"></div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <div class="flex flex-wrap justify-center gap-3 reveal">
-      <span class="bg-orygin-light border border-orygin-dark/10 text-orygin-dark/60 font-body text-sm px-4 py-2 rounded-full">Collectivités territoriales</span>
-      <span class="bg-orygin-light border border-orygin-dark/10 text-orygin-dark/60 font-body text-sm px-4 py-2 rounded-full">Entreprises locales</span>
-      <span class="bg-orygin-light border border-orygin-dark/10 text-orygin-dark/60 font-body text-sm px-4 py-2 rounded-full">Organismes de financement</span>
-      <span class="bg-orygin-light border border-orygin-dark/10 text-orygin-dark/60 font-body text-sm px-4 py-2 rounded-full">France Travail</span>
-      <span class="bg-orygin-light border border-orygin-dark/10 text-orygin-dark/60 font-body text-sm px-4 py-2 rounded-full">Structures associatives</span>
-      <span class="bg-orygin-light border border-orygin-dark/10 text-orygin-dark/60 font-body text-sm px-4 py-2 rounded-full">Établissements scolaires</span>
-    </div>
-  </div>
-</section>
-
-
-<section class="py-24 bg-orygin-light" aria-labelledby="carte-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-
-      <div class="reveal-left">
-        <span class="inline-block font-heading font-semibold text-nature text-sm uppercase tracking-widest mb-3">Notre implantation</span>
-        <h2 id="carte-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-6">
-          Présents partout<br>en Guyane
-        </h2>
-        <p class="text-orygin-dark/60 font-body text-lg leading-relaxed mb-8">
-          ORYGIN Kampus est implanté dans les principales communes de Guyane pour être au plus proche des bénéficiaires. Cayenne, Saint-Laurent-du-Maroni, Kourou, Matoury, Rémire-Montjoly.
-        </p>
-        <div class="space-y-4 mb-8">
-          <div class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-card">
-            <div class="w-10 h-10 bg-coral/10 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-coral" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-              </svg>
-            </div>
-            <div>
-              <p class="font-heading font-bold text-orygin-dark text-sm">Cayenne — Siège social</p>
-              <p class="text-orygin-dark/50 font-body text-xs">Site principal, toutes offres disponibles</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-card">
-            <div class="w-10 h-10 bg-caraibe/10 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-caraibe" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-              </svg>
-            </div>
-            <div>
-              <p class="font-heading font-bold text-orygin-dark text-sm">Saint-Laurent-du-Maroni</p>
-              <p class="text-orygin-dark/50 font-body text-xs">Antenne FLE et accompagnement</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-card">
-            <div class="w-10 h-10 bg-nature/10 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-nature" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-              </svg>
-            </div>
-            <div>
-              <p class="font-heading font-bold text-orygin-dark text-sm">Kourou</p>
-              <p class="text-orygin-dark/50 font-body text-xs">Point d'accueil &amp; formations numériques</p>
-            </div>
-          </div>
-        </div>
-        <a href="#contact" class="inline-flex items-center gap-2 bg-nature hover:bg-green-700 text-white font-heading font-bold px-6 py-3 rounded-full transition-all hover:shadow-nature hover:scale-105">
-          Trouver mon antenne
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+      <a href="{% url 'home:mission' %}" class="group bg-white rounded-3xl p-8 shadow-card hover:shadow-card-hover card-lift border border-orygin-dark/5 reveal delay-100 flex flex-col">
+        <div class="w-14 h-14 bg-coral/10 group-hover:bg-coral/20 rounded-2xl flex items-center justify-center mb-5 transition-colors duration-300">
+          <svg class="w-7 h-7 text-coral" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
           </svg>
-        </a>
-      </div>
-
-      <div class="reveal-right">
-        <div class="relative rounded-3xl overflow-hidden bg-orygin-dark aspect-square max-w-md mx-auto" role="img" aria-label="Carte de la Guyane avec les implantations ORYGIN Kampus">
-          <div class="absolute inset-0 opacity-20" aria-hidden="true"
-               style="background: radial-gradient(circle at 40% 50%, #43A047 0%, transparent 50%), radial-gradient(circle at 70% 30%, #04D2DF 0%, transparent 40%);">
-          </div>
-          <div class="absolute inset-0 flex items-center justify-center">
-            <svg viewBox="0 0 200 220" class="w-4/5 h-4/5 opacity-30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M80 20 L140 30 L160 60 L170 100 L155 140 L130 180 L100 200 L70 190 L50 160 L30 120 L25 80 L40 50 Z"
-                    fill="#43A047" stroke="#04D2DF" stroke-width="2"/>
-            </svg>
-          </div>
-          <div class="absolute" style="top: 45%; left: 52%;">
-            <div class="relative">
-              <div class="w-4 h-4 bg-coral rounded-full border-2 border-white shadow-lg"></div>
-              <div class="absolute -top-1 -left-1 w-6 h-6 bg-coral/30 rounded-full animate-ping"></div>
-              <div class="absolute left-5 top-0 bg-white text-orygin-dark font-heading font-bold text-xs px-2 py-0.5 rounded-full shadow whitespace-nowrap">Cayenne</div>
-            </div>
-          </div>
-          <div class="absolute" style="top: 30%; left: 25%;">
-            <div class="w-3 h-3 bg-caraibe rounded-full border-2 border-white shadow-lg"></div>
-            <div class="absolute left-4 -top-1 bg-white/80 text-orygin-dark font-heading font-bold text-xs px-2 py-0.5 rounded-full shadow whitespace-nowrap">St-Laurent</div>
-          </div>
-          <div class="absolute" style="top: 38%; left: 48%;">
-            <div class="w-3 h-3 bg-solar rounded-full border-2 border-white shadow-lg"></div>
-          </div>
-          <div class="absolute bottom-6 left-6 right-6">
-            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4">
-              <p class="text-white font-heading font-semibold text-sm mb-1">97 300 km² de territoire</p>
-              <p class="text-white/60 font-body text-xs">Couverture progressive de toutes les communes accessibles</p>
-            </div>
-          </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<section id="temoignages" class="py-24 bg-white" aria-labelledby="temoignages-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16 reveal">
-      <span class="inline-block font-heading font-semibold text-coral text-sm uppercase tracking-widest mb-3">Ils témoignent</span>
-      <h2 id="temoignages-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">
-        Des parcours transformés
-      </h2>
-      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto leading-relaxed">
-        Chaque réussite est une histoire humaine. Voici ce que disent celles et ceux qui ont fait confiance à ORYGIN Kampus.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <blockquote class="relative bg-orygin-light rounded-3xl p-8 card-lift reveal delay-100">
-        <div class="quote-mark text-coral mb-2" aria-hidden="true">"</div>
-        <p class="text-orygin-dark/80 font-body text-base leading-relaxed mb-8 italic">
-          Après deux ans de chômage, ORYGIN Kampus m'a redonné confiance en moi. Le suivi personnalisé et le réseau de partenaires m'ont permis de décrocher un CDI dans la logistique en seulement 4 mois.
+        <div class="w-8 h-1 bg-coral rounded-full mb-4 group-hover:w-12 transition-all duration-300"></div>
+        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Notre mission</h3>
+        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed flex-1">
+          Découvrez qui nous sommes, nos valeurs fondamentales et notre histoire depuis 2012 en Guyane.
         </p>
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-coral to-solar flex items-center justify-center flex-shrink-0">
-            <span class="font-heading font-black text-white text-sm">MC</span>
-          </div>
-          <div>
-            <p class="font-heading font-bold text-orygin-dark text-sm">Marie-Claire T.</p>
-            <p class="text-orygin-dark/50 font-body text-xs">Logisticienne — Cayenne</p>
-          </div>
-          <div class="ml-auto flex gap-0.5" aria-label="5 étoiles">
-            {% for i in "12345" %}
-            <svg class="w-4 h-4 text-solar" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            {% endfor %}
-          </div>
+        <div class="mt-6 flex items-center gap-2 text-coral font-heading font-bold text-sm group-hover:gap-3 transition-all">
+          Découvrir
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </div>
-      </blockquote>
+      </a>
 
-      <blockquote class="relative bg-orygin-dark rounded-3xl p-8 card-lift reveal delay-200">
-        <div class="quote-mark text-caraibe mb-2" aria-hidden="true">"</div>
-        <p class="text-white/80 font-body text-base leading-relaxed mb-8 italic">
-          Les cours de FLE ont changé ma vie. Je suis arrivé du Brésil sans parler français — aujourd'hui, j'ai mon diplôme DELF B2 et je travaille comme technicien dans le bâtiment.
-        </p>
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-caraibe to-nature flex items-center justify-center flex-shrink-0">
-            <span class="font-heading font-black text-white text-sm">JB</span>
-          </div>
-          <div>
-            <p class="font-heading font-bold text-white text-sm">Jean-Baptiste A.</p>
-            <p class="text-white/50 font-body text-xs">Technicien BTP — Kourou</p>
-          </div>
-          <div class="ml-auto flex gap-0.5" aria-label="5 étoiles">
-            {% for i in "12345" %}
-            <svg class="w-4 h-4 text-solar" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            {% endfor %}
-          </div>
+      <a href="{% url 'home:parcours' %}" class="group bg-white rounded-3xl p-8 shadow-card hover:shadow-card-hover card-lift border border-orygin-dark/5 reveal delay-200 flex flex-col">
+        <div class="w-14 h-14 bg-solar/20 group-hover:bg-solar/30 rounded-2xl flex items-center justify-center mb-5 transition-colors duration-300">
+          <svg class="w-7 h-7 text-yellow-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+          </svg>
         </div>
-      </blockquote>
+        <div class="w-8 h-1 bg-solar rounded-full mb-4 group-hover:w-12 transition-all duration-300"></div>
+        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Nos parcours</h3>
+        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed flex-1">
+          Un accompagnement en 4 leviers : orientation, formation, insertion professionnelle et suivi post-emploi.
+        </p>
+        <div class="mt-6 flex items-center gap-2 text-yellow-500 font-heading font-bold text-sm group-hover:gap-3 transition-all">
+          Découvrir
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+      </a>
 
-      <blockquote class="relative bg-orygin-light rounded-3xl p-8 card-lift reveal delay-300">
-        <div class="quote-mark text-creative mb-2" aria-hidden="true">"</div>
-        <p class="text-orygin-dark/80 font-body text-base leading-relaxed mb-8 italic">
-          La formation en alternance m'a permis d'obtenir ma licence RH tout en travaillant. L'équipe ORYGIN a été présente à chaque étape, avec un professionnalisme remarquable.
-        </p>
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-creative to-coral flex items-center justify-center flex-shrink-0">
-            <span class="font-heading font-black text-white text-sm">SM</span>
-          </div>
-          <div>
-            <p class="font-heading font-bold text-orygin-dark text-sm">Sandra M.</p>
-            <p class="text-orygin-dark/50 font-body text-xs">Responsable RH — St-Laurent</p>
-          </div>
-          <div class="ml-auto flex gap-0.5" aria-label="5 étoiles">
-            {% for i in "12345" %}
-            <svg class="w-4 h-4 text-solar" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            {% endfor %}
-          </div>
+      <a href="{% url 'home:offres' %}" class="group bg-white rounded-3xl p-8 shadow-card hover:shadow-card-hover card-lift border border-orygin-dark/5 reveal delay-300 flex flex-col">
+        <div class="w-14 h-14 bg-nature/10 group-hover:bg-nature/20 rounded-2xl flex items-center justify-center mb-5 transition-colors duration-300">
+          <svg class="w-7 h-7 text-nature" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+          </svg>
         </div>
-      </blockquote>
+        <div class="w-8 h-1 bg-nature rounded-full mb-4 group-hover:w-12 transition-all duration-300"></div>
+        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Nos offres</h3>
+        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed flex-1">
+          Accompagnement à l'emploi, FLE et formations supérieures Bac+2 à Bac+5. Financement CPF disponible.
+        </p>
+        <div class="mt-6 flex items-center gap-2 text-nature font-heading font-bold text-sm group-hover:gap-3 transition-all">
+          Découvrir
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+      </a>
+
+      <a href="{% url 'home:partenaires' %}" class="group bg-white rounded-3xl p-8 shadow-card hover:shadow-card-hover card-lift border border-orygin-dark/5 reveal delay-400 flex flex-col">
+        <div class="w-14 h-14 bg-creative/10 group-hover:bg-creative/20 rounded-2xl flex items-center justify-center mb-5 transition-colors duration-300">
+          <svg class="w-7 h-7 text-creative" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+        </div>
+        <div class="w-8 h-1 bg-creative rounded-full mb-4 group-hover:w-12 transition-all duration-300"></div>
+        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Nos partenaires</h3>
+        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed flex-1">
+          Un réseau d'institutions, d'entreprises et d'universités engagés pour l'insertion professionnelle en Guyane.
+        </p>
+        <div class="mt-6 flex items-center gap-2 text-creative font-heading font-bold text-sm group-hover:gap-3 transition-all">
+          Découvrir
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+      </a>
 
     </div>
   </div>
@@ -797,7 +323,7 @@
     </p>
 
     <div class="flex flex-wrap justify-center gap-5 mb-12">
-      <a href="#contact"
+      <a href="{% url 'home:contact' %}"
          class="inline-flex items-center gap-3 bg-coral hover:bg-red-600 text-white font-heading font-black text-base px-8 py-4 rounded-full transition-all duration-200 hover:shadow-coral hover:scale-105">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>

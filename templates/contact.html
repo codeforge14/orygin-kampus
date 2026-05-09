@@ -270,3 +270,90 @@
 </section>
 
 {% endblock %}
+
+{% block extra_js %}
+<script>
+"use strict";
+
+const form = document.querySelector('form[aria-label="Formulaire de contact"]');
+if (form) {
+  const REQUIRED_IDS = ["prenom", "nom", "email", "sujet", "message"];
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function setFieldError(id, hasError) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.toggle("border-coral", hasError);
+    el.classList.toggle("ring-2", hasError);
+    el.classList.toggle("ring-coral/30", hasError);
+  }
+
+  function validate() {
+    let ok = true;
+
+    REQUIRED_IDS.forEach((id) => {
+      const empty = !document.getElementById(id)?.value.trim();
+      setFieldError(id, empty);
+      if (empty) ok = false;
+    });
+
+    const emailVal = document.getElementById("email")?.value.trim();
+    if (emailVal && !EMAIL_RE.test(emailVal)) {
+      setFieldError("email", true);
+      ok = false;
+    }
+
+    const rgpd = document.getElementById("rgpd");
+    const rgpdWrapper = rgpd?.closest("div");
+    if (rgpd && !rgpd.checked) {
+      rgpdWrapper?.classList.add("outline", "outline-2", "outline-coral", "rounded-lg", "p-1");
+      ok = false;
+    } else if (rgpd) {
+      rgpdWrapper?.classList.remove("outline", "outline-2", "outline-coral", "rounded-lg", "p-1");
+    }
+
+    return ok;
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    const get      = (id) => document.getElementById(id)?.value.trim() ?? "";
+    const getLabel = (id) => {
+      const sel = document.getElementById(id);
+      return sel?.options[sel.selectedIndex]?.text ?? "";
+    };
+
+    const prenom  = get("prenom");
+    const nom     = get("nom");
+    const email   = get("email");
+    const tel     = get("telephone");
+    const sujet   = getLabel("sujet");
+    const antenne = getLabel("antenne") || "Non précisée";
+    const message = get("message");
+
+    const lines = [
+      `Prénom : ${prenom}`,
+      `Nom : ${nom}`,
+      `Email : ${email}`,
+      tel ? `Téléphone : ${tel}` : null,
+      `Sujet : ${sujet}`,
+      `Antenne souhaitée : ${antenne}`,
+      "",
+      "Message :",
+      message,
+    ].filter((l) => l !== null).join("\n");
+
+    const subject = encodeURIComponent(`[ORYGIN Kampus] ${sujet} — ${prenom} ${nom}`);
+    const body    = encodeURIComponent(lines);
+
+    window.location.href = `mailto:contact@oryginkampus.fr?subject=${subject}&body=${body}`;
+  });
+
+  form.querySelectorAll("input, select, textarea").forEach((el) => {
+    el.addEventListener("input", () => setFieldError(el.id, false));
+  });
+}
+</script>
+{% endblock %}
