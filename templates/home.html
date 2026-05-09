@@ -514,6 +514,41 @@
 </section>
 
 
+<section id="trajectoire" class="py-24 bg-orygin-light" aria-labelledby="trajectoire-heading">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="inline-block font-heading font-semibold text-coral text-sm uppercase tracking-widest mb-3">Notre trajectoire</span>
+      <h2 id="trajectoire-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">
+        12 ans de construction
+      </h2>
+      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto leading-relaxed">
+        De la création d'ORYGIN en 2012 à l'émergence d'ORYGIN Kampus, une décennie de croissance au service de la Guyane.
+      </p>
+    </div>
+
+    <div class="relative">
+      <div class="absolute left-6 sm:left-1/2 top-0 bottom-0 w-px" style="background: linear-gradient(to bottom, #F44336, #FFCC33);" aria-hidden="true"></div>
+
+      <div class="space-y-10">
+        {% for milestone in milestones %}
+        <div class="reveal relative flex gap-6 sm:gap-0 {% if forloop.counter0|divisibleby:2 %}sm:flex-row{% else %}sm:flex-row-reverse{% endif %}">
+          <div class="sm:w-1/2 {% if forloop.counter0|divisibleby:2 %}sm:pr-12 sm:text-right{% else %}sm:pl-12{% endif %} pl-14 sm:pl-0">
+            <div class="bg-white rounded-2xl p-5 shadow-card">
+              <span class="font-heading font-bold text-coral text-sm">{{ milestone.year }}</span>
+              <h3 class="font-heading font-bold text-orygin-dark text-base mt-1 mb-2">{{ milestone.title }}</h3>
+              <p class="font-body text-sm text-orygin-dark/60 leading-relaxed">{{ milestone.desc }}</p>
+            </div>
+          </div>
+          <div class="absolute left-4 sm:left-1/2 top-5 -translate-x-1/2 timeline-dot" aria-hidden="true"></div>
+          <div class="hidden sm:block sm:w-1/2" aria-hidden="true"></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section id="partenaires" class="py-24 bg-white" aria-labelledby="partenaires-heading">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 reveal">

@@ -182,6 +182,16 @@
   filter: grayscale(0%) opacity(1);
 }
 
+/* --- Timeline dot marker --- */
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: #F44336;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.2);
+}
+
 /* --- Focus styles (accessibility) --- */
 a:focus-visible,
 button:focus-visible {
