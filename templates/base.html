@@ -9,6 +9,12 @@
   <meta name="description" content="{% block meta_description %}{{ meta_description|default:"ORYGIN Kampus — Former aujourd'hui, inspirer demain." }}{% endblock %}" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+  <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}" />
+  <link rel="manifest" href="{% static 'images/site.webmanifest' %}" />
+  <meta name="theme-color" content="#1E2A36" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{% block og_title %}{{ page_title|default:"ORYGIN Kampus" }}{% endblock %}" />
   <meta property="og:description" content="{{ meta_description|default:"ORYGIN Kampus — Former aujourd'hui, inspirer demain." }}" />
