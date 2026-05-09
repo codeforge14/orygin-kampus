@@ -52,3 +52,64 @@ def home(request: HttpRequest) -> HttpResponse:
         "milestones": _MILESTONES,
     }
     return render(request, "home.html", context)
+
+
+def mission(request: HttpRequest) -> HttpResponse:
+    """Render the mission & valeurs page."""
+    context = {
+        "page_title": "Notre mission — ORYGIN Kampus",
+        "meta_description": (
+            "Découvrez la mission, les valeurs et l'histoire d'ORYGIN Kampus, "
+            "organisme de formation et d'insertion professionnelle en Guyane française."
+        ),
+        "milestones": _MILESTONES,
+    }
+    return render(request, "mission.html", context)
+
+
+def parcours(request: HttpRequest) -> HttpResponse:
+    """Render the parcours page."""
+    context = {
+        "page_title": "Nos parcours — ORYGIN Kampus",
+        "meta_description": (
+            "Un accompagnement en 4 leviers : orientation, formation, insertion et suivi "
+            "post-emploi. Découvrez la méthode ORYGIN Kampus pour votre projet professionnel."
+        ),
+    }
+    return render(request, "parcours.html", context)
+
+
+def offres(request: HttpRequest) -> HttpResponse:
+    """Render the offres de formation page."""
+    context = {
+        "page_title": "Nos offres de formation — ORYGIN Kampus",
+        "meta_description": (
+            "Accompagnement à l'emploi, Français Langue Étrangère et formations supérieures. "
+            "Financement CPF, OPCO, France Travail disponible. Certifié Qualiopi."
+        ),
+    }
+    return render(request, "offres.html", context)
+
+
+def partenaires(request: HttpRequest) -> HttpResponse:
+    """Render the partenaires page."""
+    context = {
+        "page_title": "Nos partenaires — ORYGIN Kampus",
+        "meta_description": (
+            "ORYGIN Kampus s'appuie sur un réseau de partenaires institutionnels, "
+            "d'entreprises et d'universités pour accompagner les talents de Guyane."
+        ),
+    }
+    return render(request, "partenaires.html", context)
+
+
+def contact(request: HttpRequest) -> HttpResponse:
+    """Render the contact page."""
+    context = {
+        "page_title": "Nous contacter — ORYGIN Kampus",
+        "meta_description": (
+            "Contactez ORYGIN Kampus à Cayenne, Saint-Laurent-du-Maroni ou Kourou. "
+            "Entretien gratuit, réponse sous 48h."
+        ),
+    }
+    return render(request, "contact.html", context)

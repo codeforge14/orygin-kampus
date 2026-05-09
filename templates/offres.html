@@ -1,0 +1,339 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Nos offres de formation — ORYGIN Kampus{% endblock %}
+
+{% block content %}
+
+<section class="bg-orygin-dark pt-36 pb-20 relative overflow-hidden" aria-labelledby="offres-page-heading">
+  <div class="absolute inset-0 opacity-5" aria-hidden="true"
+       style="background: radial-gradient(ellipse 60% 50% at 10% 40%, #43A047, transparent), radial-gradient(ellipse 50% 40% at 90% 60%, #9C27B0, transparent);"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-white/40 font-body text-sm mb-8" aria-label="Fil d'Ariane">
+      <a href="{% url 'home:home' %}" class="hover:text-white transition-colors">Accueil</a>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-white/70">Nos offres</span>
+    </nav>
+    <div class="max-w-3xl">
+      <span class="inline-block font-heading font-semibold text-nature text-sm uppercase tracking-widest mb-4">Ce que nous proposons</span>
+      <h1 id="offres-page-heading" class="font-heading font-black text-white text-5xl sm:text-6xl leading-tight mb-6">
+        Des formations<br><span class="text-nature">qui changent des vies</span>
+      </h1>
+      <p class="text-white/60 font-body text-xl leading-relaxed">
+        Trois gammes d'accompagnement complémentaires, toutes certifiées Qualiopi, pour couvrir l'ensemble des besoins professionnels en Guyane.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-24 bg-white" aria-labelledby="offres-detail-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <h2 id="offres-detail-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">Nos 3 offres principales</h2>
+      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto">Chaque offre est conçue pour répondre à des besoins spécifiques et peut être combinée avec les autres selon votre projet.</p>
+    </div>
+
+    <div class="space-y-16">
+
+      <article class="grid lg:grid-cols-2 gap-12 items-center reveal">
+        <div>
+          <div class="inline-flex items-center gap-3 mb-6">
+            <div class="w-14 h-14 bg-coral/10 rounded-2xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-coral" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="font-heading font-semibold text-coral text-xs uppercase tracking-widest block">Offre 01</span>
+              <h3 class="font-heading font-bold text-orygin-dark text-2xl">Accompagnement à l'emploi &amp; à l'entrepreneuriat</h3>
+            </div>
+          </div>
+          <p class="text-orygin-dark/70 font-body text-lg leading-relaxed mb-6">
+            Un suivi personnalisé et intensif pour construire votre projet professionnel, développer vos compétences transversales et accéder durablement à l'emploi ou à la création d'entreprise.
+          </p>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-coral/5 border border-coral/15 rounded-2xl p-4">
+              <p class="font-heading font-bold text-coral text-sm mb-1">Durée</p>
+              <p class="text-orygin-dark/60 font-body text-sm">3 à 6 mois</p>
+            </div>
+            <div class="bg-coral/5 border border-coral/15 rounded-2xl p-4">
+              <p class="font-heading font-bold text-coral text-sm mb-1">Format</p>
+              <p class="text-orygin-dark/60 font-body text-sm">Individuel &amp; collectif</p>
+            </div>
+            <div class="bg-coral/5 border border-coral/15 rounded-2xl p-4">
+              <p class="font-heading font-bold text-coral text-sm mb-1">Financement</p>
+              <p class="text-orygin-dark/60 font-body text-sm">France Travail, CPF</p>
+            </div>
+            <div class="bg-coral/5 border border-coral/15 rounded-2xl p-4">
+              <p class="font-heading font-bold text-coral text-sm mb-1">Prérequis</p>
+              <p class="text-orygin-dark/60 font-body text-sm">Aucun</p>
+            </div>
+          </div>
+          <ul class="space-y-2.5 mb-8">
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-coral flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Bilan de compétences approfondi et bilan professionnel</span></li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-coral flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Coaching individuel hebdomadaire avec un conseiller dédié</span></li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-coral flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Ateliers collectifs (CV, entretien, création d'entreprise)</span></li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-coral flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Mise en relation directe avec le réseau d'employeurs</span></li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-coral flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Suivi post-emploi pendant 6 mois minimum</span></li>
+          </ul>
+          <a href="{% url 'home:contact' %}" class="inline-flex items-center gap-2 bg-coral hover:bg-red-600 text-white font-heading font-bold px-6 py-3 rounded-full transition-all hover:shadow-coral hover:scale-105">
+            Candidater à cette offre
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+        <div class="bg-orygin-light rounded-3xl p-8 space-y-4">
+          <h4 class="font-heading font-bold text-orygin-dark text-lg mb-6">Modules disponibles</h4>
+          <div class="bg-white rounded-2xl p-5 shadow-card">
+            <p class="font-heading font-bold text-orygin-dark text-sm mb-1">Module A — Projet professionnel</p>
+            <p class="text-orygin-dark/50 font-body text-xs">Durée : 4 semaines · Individuel</p>
+          </div>
+          <div class="bg-white rounded-2xl p-5 shadow-card">
+            <p class="font-heading font-bold text-orygin-dark text-sm mb-1">Module B — Techniques de recherche d'emploi</p>
+            <p class="text-orygin-dark/50 font-body text-xs">Durée : 3 semaines · Collectif</p>
+          </div>
+          <div class="bg-white rounded-2xl p-5 shadow-card">
+            <p class="font-heading font-bold text-orygin-dark text-sm mb-1">Module C — Création d'entreprise</p>
+            <p class="text-orygin-dark/50 font-body text-xs">Durée : 6 semaines · Hybride</p>
+          </div>
+          <div class="bg-white rounded-2xl p-5 shadow-card">
+            <p class="font-heading font-bold text-orygin-dark text-sm mb-1">Module D — Savoirs de base &amp; numérique</p>
+            <p class="text-orygin-dark/50 font-body text-xs">Durée : 4 semaines · Individuel</p>
+          </div>
+        </div>
+      </article>
+
+      <hr class="border-orygin-dark/10" aria-hidden="true">
+
+      <article class="grid lg:grid-cols-2 gap-12 items-center reveal">
+        <div class="order-last lg:order-first bg-orygin-dark rounded-3xl p-8 space-y-4">
+          <h4 class="font-heading font-bold text-white text-lg mb-6">Niveaux proposés</h4>
+          <div class="flex items-center gap-4 bg-white/5 rounded-2xl p-4">
+            <span class="font-heading font-black text-nature text-lg w-12">A1</span>
+            <div class="flex-1"><div class="h-2 rounded-full bg-white/10 overflow-hidden"><div class="h-full bg-nature rounded-full" style="width:20%"></div></div></div>
+            <span class="text-white/40 font-body text-xs">Découverte</span>
+          </div>
+          <div class="flex items-center gap-4 bg-white/5 rounded-2xl p-4">
+            <span class="font-heading font-black text-nature text-lg w-12">A2</span>
+            <div class="flex-1"><div class="h-2 rounded-full bg-white/10 overflow-hidden"><div class="h-full bg-nature rounded-full" style="width:40%"></div></div></div>
+            <span class="text-white/40 font-body text-xs">Survie</span>
+          </div>
+          <div class="flex items-center gap-4 bg-white/5 rounded-2xl p-4">
+            <span class="font-heading font-black text-nature text-lg w-12">B1</span>
+            <div class="flex-1"><div class="h-2 rounded-full bg-white/10 overflow-hidden"><div class="h-full bg-nature rounded-full" style="width:60%"></div></div></div>
+            <span class="text-white/40 font-body text-xs">Seuil</span>
+          </div>
+          <div class="flex items-center gap-4 bg-white/5 rounded-2xl p-4">
+            <span class="font-heading font-black text-nature text-lg w-12">B2</span>
+            <div class="flex-1"><div class="h-2 rounded-full bg-white/10 overflow-hidden"><div class="h-full bg-nature rounded-full" style="width:80%"></div></div></div>
+            <span class="text-white/40 font-body text-xs">Avancé</span>
+          </div>
+          <div class="mt-4 bg-nature/20 border border-nature/30 rounded-2xl p-4 text-center">
+            <p class="font-heading font-bold text-nature text-sm">Préparation DELF / DALF</p>
+            <p class="text-white/50 font-body text-xs mt-1">Certification officielle reconnue</p>
+          </div>
+        </div>
+        <div>
+          <div class="inline-flex items-center gap-3 mb-6">
+            <div class="w-14 h-14 bg-nature/10 rounded-2xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-nature" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+              </svg>
+            </div>
+            <div>
+              <span class="font-heading font-semibold text-nature text-xs uppercase tracking-widest block">Offre 02</span>
+              <h3 class="font-heading font-bold text-orygin-dark text-2xl">FLE — Français Langue Étrangère</h3>
+            </div>
+          </div>
+          <p class="text-orygin-dark/70 font-body text-lg leading-relaxed mb-6">
+            Des cours de français adaptés aux primo-arrivants et aux personnes en situation de multilinguisme. Une pédagogie interculturelle qui respecte les identités et facilite l'intégration dans la société guyanaise.
+          </p>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-nature/5 border border-nature/15 rounded-2xl p-4">
+              <p class="font-heading font-bold text-nature text-sm mb-1">Durée</p>
+              <p class="text-orygin-dark/60 font-body text-sm">1 à 8 mois</p>
+            </div>
+            <div class="bg-nature/5 border border-nature/15 rounded-2xl p-4">
+              <p class="font-heading font-bold text-nature text-sm mb-1">Format</p>
+              <p class="text-orygin-dark/60 font-body text-sm">Présentiel &amp; distanciel</p>
+            </div>
+            <div class="bg-nature/5 border border-nature/15 rounded-2xl p-4">
+              <p class="font-heading font-bold text-nature text-sm mb-1">Financement</p>
+              <p class="text-orygin-dark/60 font-body text-sm">France Travail, OFII</p>
+            </div>
+            <div class="bg-nature/5 border border-nature/15 rounded-2xl p-4">
+              <p class="font-heading font-bold text-nature text-sm mb-1">Prérequis</p>
+              <p class="text-orygin-dark/60 font-body text-sm">Aucun — niveau A1 minimum</p>
+            </div>
+          </div>
+          <ul class="space-y-2.5 mb-8">
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-nature flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Niveaux A1 à B2 du Cadre Européen de Référence</span></li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-nature flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Préparation aux certifications DELF et DALF</span></li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-nature flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Français professionnel sectorisé (santé, BTP, commerce…)</span></li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-nature flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Ateliers sociolinguistiques et interculturels</span></li>
+          </ul>
+          <a href="{% url 'home:contact' %}" class="inline-flex items-center gap-2 bg-nature hover:bg-green-700 text-white font-heading font-bold px-6 py-3 rounded-full transition-all hover:shadow-nature hover:scale-105">
+            S'inscrire au FLE
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <hr class="border-orygin-dark/10" aria-hidden="true">
+
+      <article class="grid lg:grid-cols-2 gap-12 items-center reveal">
+        <div>
+          <div class="inline-flex items-center gap-3 mb-6">
+            <div class="w-14 h-14 bg-creative/10 rounded-2xl flex items-center justify-center">
+              <svg class="w-7 h-7 text-creative" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="font-heading font-semibold text-creative text-xs uppercase tracking-widest block">Offre 03</span>
+              <h3 class="font-heading font-bold text-orygin-dark text-2xl">Formations supérieures Bac+2 à Bac+5</h3>
+            </div>
+          </div>
+          <p class="text-orygin-dark/70 font-body text-lg leading-relaxed mb-6">
+            Des parcours diplômants accessibles en Guyane grâce à nos partenariats avec des établissements d'enseignement supérieur métropolitains et caribéens. Obtenez un diplôme reconnu sans quitter le territoire.
+          </p>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-creative/5 border border-creative/15 rounded-2xl p-4">
+              <p class="font-heading font-bold text-creative text-sm mb-1">Niveaux</p>
+              <p class="text-orygin-dark/60 font-body text-sm">Bac+2 à Bac+5</p>
+            </div>
+            <div class="bg-creative/5 border border-creative/15 rounded-2xl p-4">
+              <p class="font-heading font-bold text-creative text-sm mb-1">Format</p>
+              <p class="text-orygin-dark/60 font-body text-sm">Présentiel &amp; alternance</p>
+            </div>
+            <div class="bg-creative/5 border border-creative/15 rounded-2xl p-4">
+              <p class="font-heading font-bold text-creative text-sm mb-1">Financement</p>
+              <p class="text-orygin-dark/60 font-body text-sm">CPF, OPCO, alternance</p>
+            </div>
+            <div class="bg-creative/5 border border-creative/15 rounded-2xl p-4">
+              <p class="font-heading font-bold text-creative text-sm mb-1">Prérequis</p>
+              <p class="text-orygin-dark/60 font-body text-sm">Selon le diplôme visé</p>
+            </div>
+          </div>
+          <ul class="space-y-2.5 mb-8">
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-creative flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Licences professionnelles, Bachelor, Masters</span></li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-creative flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Formations en alternance et Validation des Acquis (VAE)</span></li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-creative flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Management, RH, santé, numérique, commerce</span></li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-creative flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span class="text-orygin-dark/70 font-body text-sm">Diplômes inscrits au RNCP et reconnus nationalement</span></li>
+          </ul>
+          <a href="{% url 'home:contact' %}" class="inline-flex items-center gap-2 border-2 border-creative text-creative hover:bg-creative hover:text-white font-heading font-bold px-6 py-3 rounded-full transition-all">
+            Voir les programmes
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+        <div class="bg-orygin-dark rounded-3xl p-8 space-y-4">
+          <h4 class="font-heading font-bold text-white text-lg mb-6">Domaines disponibles</h4>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="bg-white/5 rounded-2xl p-4 text-center hover:bg-creative/20 transition-colors">
+              <svg class="w-6 h-6 text-creative mx-auto mb-2" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <p class="font-heading font-bold text-white text-xs">Management &amp; RH</p>
+            </div>
+            <div class="bg-white/5 rounded-2xl p-4 text-center hover:bg-creative/20 transition-colors">
+              <svg class="w-6 h-6 text-creative mx-auto mb-2" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <p class="font-heading font-bold text-white text-xs">Numérique &amp; Digital</p>
+            </div>
+            <div class="bg-white/5 rounded-2xl p-4 text-center hover:bg-creative/20 transition-colors">
+              <svg class="w-6 h-6 text-creative mx-auto mb-2" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              <p class="font-heading font-bold text-white text-xs">Santé &amp; Social</p>
+            </div>
+            <div class="bg-white/5 rounded-2xl p-4 text-center hover:bg-creative/20 transition-colors">
+              <svg class="w-6 h-6 text-creative mx-auto mb-2" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              <p class="font-heading font-bold text-white text-xs">Commerce &amp; Vente</p>
+            </div>
+          </div>
+          <div class="mt-4 bg-creative/10 border border-creative/20 rounded-2xl p-4 text-center">
+            <p class="text-white/60 font-body text-xs">Nouvelles filières en cours de partenariat</p>
+            <p class="font-heading font-bold text-creative text-sm mt-1">Droit · Tourisme · Environnement</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-24 bg-orygin-light" aria-labelledby="financement-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="inline-block font-heading font-semibold text-solar text-sm uppercase tracking-widest mb-3">Ne laissez pas l'argent freiner votre projet</span>
+      <h2 id="financement-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">Solutions de financement</h2>
+      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto">Nous vous guidons dans toutes les démarches de financement. Dans la plupart des cas, votre formation peut être prise en charge à 100%.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-3xl p-8 shadow-card reveal delay-100">
+        <div class="w-12 h-12 bg-coral/10 rounded-2xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-coral" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">CPF — Compte Personnel de Formation</h3>
+        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed">Utilisez vos droits CPF pour financer votre bilan de compétences ou vos modules certifiants. Nos formations sont éligibles.</p>
+      </div>
+      <div class="bg-white rounded-3xl p-8 shadow-card reveal delay-200">
+        <div class="w-12 h-12 bg-caraibe/10 rounded-2xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-caraibe" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">France Travail</h3>
+        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed">Pour les demandeurs d'emploi inscrits, France Travail peut financer l'ensemble du parcours formation + accompagnement.</p>
+      </div>
+      <div class="bg-white rounded-3xl p-8 shadow-card reveal delay-300">
+        <div class="w-12 h-12 bg-nature/10 rounded-2xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-nature" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">OPCO &amp; Plan de développement</h3>
+        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed">Pour les salariés, l'OPCO de votre branche professionnelle peut prendre en charge votre formation dans le cadre du plan de développement des compétences.</p>
+      </div>
+      <div class="bg-white rounded-3xl p-8 shadow-card reveal delay-100">
+        <div class="w-12 h-12 bg-solar/20 rounded-2xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Région Guyane</h3>
+        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed">Des dispositifs régionaux spécifiques à la Guyane permettent de financer certaines formations prioritaires pour le développement local.</p>
+      </div>
+      <div class="bg-white rounded-3xl p-8 shadow-card reveal delay-200">
+        <div class="w-12 h-12 bg-creative/10 rounded-2xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-creative" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Pro-A &amp; Alternance</h3>
+        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed">La reconversion ou la promotion par l'alternance (Pro-A) permet aux salariés de se qualifier en alternant formation et activité professionnelle.</p>
+      </div>
+      <div class="bg-orygin-dark rounded-3xl p-8 shadow-card reveal delay-300 flex flex-col justify-between">
+        <div>
+          <p class="font-heading font-bold text-white text-lg mb-3">Vous ne savez pas quel dispositif vous correspond ?</p>
+          <p class="text-white/60 font-body text-sm leading-relaxed mb-6">Notre équipe vous accompagne gratuitement dans le montage de votre dossier de financement.</p>
+        </div>
+        <a href="{% url 'home:contact' %}" class="inline-flex items-center gap-2 bg-solar text-orygin-dark font-heading font-bold text-sm px-5 py-3 rounded-full transition-all hover:shadow-solar hover:scale-105 self-start">
+          Étude de financement gratuite
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-20 bg-orygin-dark relative overflow-hidden" aria-labelledby="cta-offres-heading">
+  <div class="absolute inset-0 opacity-10" aria-hidden="true"
+       style="background: radial-gradient(ellipse 50% 60% at 80% 50%, #43A047, transparent);"></div>
+  <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center reveal">
+    <h2 id="cta-offres-heading" class="font-heading font-black text-white text-4xl sm:text-5xl mb-6">
+      Trouvez la formation<br>qu'il vous faut
+    </h2>
+    <p class="text-white/60 font-body text-lg mb-10">
+      Un conseiller vous recontacte dans les 48h pour faire le point sur votre situation et identifier la meilleure offre.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="{% url 'home:contact' %}" class="inline-flex items-center gap-2 bg-coral hover:bg-red-600 text-white font-heading font-bold px-8 py-4 rounded-full transition-all hover:shadow-coral hover:scale-105">
+        Demander un conseil gratuit
+      </a>
+      <a href="{% url 'home:parcours' %}" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-heading font-bold px-8 py-4 rounded-full transition-all">
+        Voir les parcours
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

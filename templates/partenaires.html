@@ -1,0 +1,298 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Nos partenaires — ORYGIN Kampus{% endblock %}
+
+{% block content %}
+
+<section class="bg-orygin-dark pt-36 pb-20 relative overflow-hidden" aria-labelledby="partenaires-page-heading">
+  <div class="absolute inset-0 opacity-5" aria-hidden="true"
+       style="background: radial-gradient(ellipse 60% 50% at 20% 40%, #9C27B0, transparent), radial-gradient(ellipse 50% 40% at 85% 60%, #04D2DF, transparent);"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-white/40 font-body text-sm mb-8" aria-label="Fil d'Ariane">
+      <a href="{% url 'home:home' %}" class="hover:text-white transition-colors">Accueil</a>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-white/70">Nos partenaires</span>
+    </nav>
+    <div class="max-w-3xl">
+      <span class="inline-block font-heading font-semibold text-creative text-sm uppercase tracking-widest mb-4">Un réseau solide</span>
+      <h1 id="partenaires-page-heading" class="font-heading font-black text-white text-5xl sm:text-6xl leading-tight mb-6">
+        Ils font confiance<br><span class="text-creative">à ORYGIN Kampus</span>
+      </h1>
+      <p class="text-white/60 font-body text-xl leading-relaxed">
+        Un écosystème de partenaires institutionnels, d'entreprises et d'universités qui partagent notre conviction : la formation est le levier le plus puissant du développement guyanais.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-24 bg-white" aria-labelledby="partenaires-instit-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="inline-block font-heading font-semibold text-creative text-sm uppercase tracking-widest mb-3">Secteur public</span>
+      <h2 id="partenaires-instit-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">Partenaires institutionnels</h2>
+      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto">Les institutions guyanaises et nationales qui soutiennent notre mission et financent nos programmes.</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 reveal">
+      {% for i in "abcdef" %}
+      <div class="flex flex-col items-center justify-center h-28 bg-orygin-light rounded-2xl border border-orygin-dark/5 partner-logo hover:shadow-card transition-all duration-300 p-4">
+        <div class="w-12 h-12 mx-auto bg-orygin-dark/10 rounded-xl mb-2"></div>
+        <div class="w-16 h-2 mx-auto bg-orygin-dark/10 rounded-full"></div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="mt-8 flex flex-wrap justify-center gap-3 reveal">
+      <span class="bg-orygin-light border border-orygin-dark/10 text-orygin-dark/60 font-body text-sm px-4 py-2 rounded-full">Collectivité Territoriale de Guyane</span>
+      <span class="bg-orygin-light border border-orygin-dark/10 text-orygin-dark/60 font-body text-sm px-4 py-2 rounded-full">France Travail Guyane</span>
+      <span class="bg-orygin-light border border-orygin-dark/10 text-orygin-dark/60 font-body text-sm px-4 py-2 rounded-full">DREETS Guyane</span>
+      <span class="bg-orygin-light border border-orygin-dark/10 text-orygin-dark/60 font-body text-sm px-4 py-2 rounded-full">Région Guyane</span>
+      <span class="bg-orygin-light border border-orygin-dark/10 text-orygin-dark/60 font-body text-sm px-4 py-2 rounded-full">Fonds Social Européen</span>
+      <span class="bg-orygin-light border border-orygin-dark/10 text-orygin-dark/60 font-body text-sm px-4 py-2 rounded-full">OFII</span>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-24 bg-orygin-light" aria-labelledby="partenaires-entreprises-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="inline-block font-heading font-semibold text-caraibe text-sm uppercase tracking-widest mb-3">Secteur privé</span>
+      <h2 id="partenaires-entreprises-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">Partenaires employeurs</h2>
+      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto">Les entreprises guyanaises et grands groupes qui accueillent nos bénéficiaires en stage, en alternance ou en CDI/CDD.</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 reveal mb-12">
+      {% for i in "abcdefghijkl" %}
+      <div class="flex flex-col items-center justify-center h-28 bg-white rounded-2xl border border-orygin-dark/5 partner-logo hover:shadow-card transition-all duration-300 p-4">
+        <div class="w-12 h-12 mx-auto bg-orygin-dark/10 rounded-xl mb-2"></div>
+        <div class="w-16 h-2 mx-auto bg-orygin-dark/10 rounded-full"></div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6 reveal">
+      <div class="bg-white rounded-3xl p-6 shadow-card text-center">
+        <p class="font-heading font-black text-3xl text-caraibe mb-1">20<span class="text-xl">+</span></p>
+        <p class="text-orygin-dark/60 font-body text-sm">Employeurs partenaires actifs</p>
+      </div>
+      <div class="bg-white rounded-3xl p-6 shadow-card text-center">
+        <p class="font-heading font-black text-3xl text-coral mb-1">150<span class="text-xl">+</span></p>
+        <p class="text-orygin-dark/60 font-body text-sm">Offres d'emploi transmises / an</p>
+      </div>
+      <div class="bg-white rounded-3xl p-6 shadow-card text-center">
+        <p class="font-heading font-black text-3xl text-nature mb-1">8</p>
+        <p class="text-orygin-dark/60 font-body text-sm">Secteurs d'activité couverts</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-24 bg-white" aria-labelledby="partenaires-univ-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="inline-block font-heading font-semibold text-coral text-sm uppercase tracking-widest mb-3">Enseignement supérieur</span>
+      <h2 id="partenaires-univ-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">Partenaires pédagogiques</h2>
+      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto">Des établissements d'enseignement supérieur qui co-construisent avec nous des formations diplômantes accessibles en Guyane.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <article class="bg-orygin-light rounded-3xl p-8 reveal delay-100">
+        <div class="w-14 h-14 bg-creative/10 rounded-2xl flex items-center justify-center mb-5">
+          <svg class="w-7 h-7 text-creative" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+          </svg>
+        </div>
+        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Universités</h3>
+        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed mb-4">Partenariats avec des universités métropolitaines et caribéennes pour des formations diplômantes de niveau Licence et Master.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-creative/10 text-creative font-body text-xs px-3 py-1 rounded-full">Licence Pro</span>
+          <span class="bg-creative/10 text-creative font-body text-xs px-3 py-1 rounded-full">Master 1 &amp; 2</span>
+          <span class="bg-creative/10 text-creative font-body text-xs px-3 py-1 rounded-full">VAE</span>
+        </div>
+      </article>
+      <article class="bg-orygin-light rounded-3xl p-8 reveal delay-200">
+        <div class="w-14 h-14 bg-caraibe/10 rounded-2xl flex items-center justify-center mb-5">
+          <svg class="w-7 h-7 text-caraibe" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+          </svg>
+        </div>
+        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Écoles professionnelles</h3>
+        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed mb-4">Accords avec des écoles de commerce, d'ingénieurs et de santé pour proposer des formations spécialisées de haut niveau.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-caraibe/10 text-caraibe font-body text-xs px-3 py-1 rounded-full">Bachelor</span>
+          <span class="bg-caraibe/10 text-caraibe font-body text-xs px-3 py-1 rounded-full">MBA</span>
+          <span class="bg-caraibe/10 text-caraibe font-body text-xs px-3 py-1 rounded-full">Alternance</span>
+        </div>
+      </article>
+      <article class="bg-orygin-light rounded-3xl p-8 reveal delay-300">
+        <div class="w-14 h-14 bg-nature/10 rounded-2xl flex items-center justify-center mb-5">
+          <svg class="w-7 h-7 text-nature" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+        </div>
+        <h3 class="font-heading font-bold text-orygin-dark text-lg mb-2">Centres de certification</h3>
+        <p class="text-orygin-dark/60 font-body text-sm leading-relaxed mb-4">Partenariats avec des organismes certificateurs pour valider et reconnaître les compétences acquises (RNCP, RS).</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-nature/10 text-nature font-body text-xs px-3 py-1 rounded-full">RNCP</span>
+          <span class="bg-nature/10 text-nature font-body text-xs px-3 py-1 rounded-full">DELF/DALF</span>
+          <span class="bg-nature/10 text-nature font-body text-xs px-3 py-1 rounded-full">Qualiopi</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section id="temoignages" class="py-24 bg-orygin-light" aria-labelledby="temoignages-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="inline-block font-heading font-semibold text-coral text-sm uppercase tracking-widest mb-3">Ils témoignent</span>
+      <h2 id="temoignages-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">Des parcours transformés</h2>
+      <p class="text-orygin-dark/60 font-body text-lg max-w-2xl mx-auto">Chaque réussite est une histoire humaine. Voici ce que disent celles et ceux qui ont fait confiance à ORYGIN Kampus.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <blockquote class="relative bg-white rounded-3xl p-8 card-lift shadow-card reveal delay-100">
+        <div class="quote-mark text-coral mb-2" aria-hidden="true">"</div>
+        <p class="text-orygin-dark/80 font-body text-base leading-relaxed mb-8 italic">
+          Après deux ans de chômage, ORYGIN Kampus m'a redonné confiance en moi. Le suivi personnalisé et le réseau de partenaires m'ont permis de décrocher un CDI dans la logistique en seulement 4 mois.
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-coral to-solar flex items-center justify-center flex-shrink-0">
+            <span class="font-heading font-black text-white text-sm">MC</span>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-orygin-dark text-sm">Marie-Claire T.</p>
+            <p class="text-orygin-dark/50 font-body text-xs">Logisticienne — Cayenne</p>
+          </div>
+          <div class="ml-auto flex gap-0.5" aria-label="5 étoiles">
+            {% for i in "12345" %}
+            <svg class="w-4 h-4 text-solar" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            {% endfor %}
+          </div>
+        </div>
+      </blockquote>
+      <blockquote class="relative bg-orygin-dark rounded-3xl p-8 card-lift shadow-card reveal delay-200">
+        <div class="quote-mark text-caraibe mb-2" aria-hidden="true">"</div>
+        <p class="text-white/80 font-body text-base leading-relaxed mb-8 italic">
+          Les cours de FLE ont changé ma vie. Je suis arrivé du Brésil sans parler français — aujourd'hui, j'ai mon diplôme DELF B2 et je travaille comme technicien dans le bâtiment.
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-caraibe to-nature flex items-center justify-center flex-shrink-0">
+            <span class="font-heading font-black text-white text-sm">JB</span>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-white text-sm">Jean-Baptiste A.</p>
+            <p class="text-white/50 font-body text-xs">Technicien BTP — Kourou</p>
+          </div>
+          <div class="ml-auto flex gap-0.5" aria-label="5 étoiles">
+            {% for i in "12345" %}
+            <svg class="w-4 h-4 text-solar" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            {% endfor %}
+          </div>
+        </div>
+      </blockquote>
+      <blockquote class="relative bg-white rounded-3xl p-8 card-lift shadow-card reveal delay-300">
+        <div class="quote-mark text-creative mb-2" aria-hidden="true">"</div>
+        <p class="text-orygin-dark/80 font-body text-base leading-relaxed mb-8 italic">
+          La formation en alternance m'a permis d'obtenir ma licence RH tout en travaillant. L'équipe ORYGIN a été présente à chaque étape, avec un professionnalisme remarquable.
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-creative to-coral flex items-center justify-center flex-shrink-0">
+            <span class="font-heading font-black text-white text-sm">SM</span>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-orygin-dark text-sm">Sandra M.</p>
+            <p class="text-orygin-dark/50 font-body text-xs">Responsable RH — St-Laurent</p>
+          </div>
+          <div class="ml-auto flex gap-0.5" aria-label="5 étoiles">
+            {% for i in "12345" %}
+            <svg class="w-4 h-4 text-solar" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            {% endfor %}
+          </div>
+        </div>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-24 bg-white" aria-labelledby="devenir-partenaire-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="reveal-left">
+        <span class="inline-block font-heading font-semibold text-caraibe text-sm uppercase tracking-widest mb-4">Rejoignez le réseau</span>
+        <h2 id="devenir-partenaire-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-6">Devenir partenaire d'ORYGIN Kampus</h2>
+        <p class="text-orygin-dark/70 font-body text-lg leading-relaxed mb-8">
+          Vous êtes une entreprise, une institution ou un organisme qui croit au développement du capital humain en Guyane ? Rejoignez notre réseau et bénéficiez d'un accès privilégié à des talents formés et accompagnés.
+        </p>
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-caraibe/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5 text-caraibe" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <p class="font-heading font-bold text-orygin-dark text-sm mb-1">Accès à un vivier de candidats qualifiés</p>
+              <p class="text-orygin-dark/60 font-body text-sm">Des profils pré-sélectionnés, formés et accompagnés, prêts à intégrer votre structure.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-nature/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5 text-nature" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div>
+              <p class="font-heading font-bold text-orygin-dark text-sm mb-1">Suivi et médiation pendant 6 mois</p>
+              <p class="text-orygin-dark/60 font-body text-sm">Notre équipe reste disponible après la prise de poste pour assurer une intégration réussie.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-solar/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <p class="font-heading font-bold text-orygin-dark text-sm mb-1">Avantages fiscaux et aides à l'embauche</p>
+              <p class="text-orygin-dark/60 font-body text-sm">Nous vous orientons vers les dispositifs d'aide à l'embauche disponibles en Guyane.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-creative/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5 text-creative" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+            </div>
+            <div>
+              <p class="font-heading font-bold text-orygin-dark text-sm mb-1">Visibilité et communication</p>
+              <p class="text-orygin-dark/60 font-body text-sm">Votre logo sur nos supports, présence dans nos événements et notre réseau.</p>
+            </div>
+          </div>
+        </div>
+        <a href="{% url 'home:contact' %}" class="inline-flex items-center gap-2 bg-caraibe hover:bg-cyan-500 text-white font-heading font-bold px-8 py-4 rounded-full transition-all hover:shadow-caraibe hover:scale-105">
+          Devenir partenaire
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <div class="bg-orygin-dark rounded-3xl p-10 reveal-right">
+        <h3 class="font-heading font-bold text-white text-xl mb-8">Types de partenariat</h3>
+        <div class="space-y-4">
+          <div class="bg-white/5 hover:bg-white/10 rounded-2xl p-5 transition-colors cursor-default">
+            <div class="flex items-center justify-between mb-2">
+              <p class="font-heading font-bold text-white text-sm">Partenariat emploi</p>
+              <span class="bg-coral/20 text-coral font-body text-xs px-2 py-0.5 rounded-full">Populaire</span>
+            </div>
+            <p class="text-white/50 font-body text-xs">Accueil de stagiaires, alternants et titulaires. Diffusion de vos offres dans notre réseau.</p>
+          </div>
+          <div class="bg-white/5 hover:bg-white/10 rounded-2xl p-5 transition-colors cursor-default">
+            <p class="font-heading font-bold text-white text-sm mb-2">Partenariat pédagogique</p>
+            <p class="text-white/50 font-body text-xs">Intervention de vos experts en formation, co-conception de modules métiers.</p>
+          </div>
+          <div class="bg-white/5 hover:bg-white/10 rounded-2xl p-5 transition-colors cursor-default">
+            <p class="font-heading font-bold text-white text-sm mb-2">Partenariat institutionnel</p>
+            <p class="text-white/50 font-body text-xs">Co-financement de programmes, conventionnement, communication conjointe.</p>
+          </div>
+          <div class="bg-white/5 hover:bg-white/10 rounded-2xl p-5 transition-colors cursor-default">
+            <p class="font-heading font-bold text-white text-sm mb-2">Mécénat &amp; RSE</p>
+            <p class="text-white/50 font-body text-xs">Soutien financier ou en nature à nos programmes d'inclusion et d'insertion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

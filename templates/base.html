@@ -66,15 +66,15 @@
         </a>
 
         <div class="hidden lg:flex items-center gap-1" role="menubar">
-          <a href="#mission"     role="menuitem" class="nav-link px-4 py-2 text-white/70 hover:text-white font-body font-semibold text-sm rounded-lg hover:bg-white/5 transition-all duration-200">Notre mission</a>
-          <a href="#parcours"    role="menuitem" class="nav-link px-4 py-2 text-white/70 hover:text-white font-body font-semibold text-sm rounded-lg hover:bg-white/5 transition-all duration-200">Parcours</a>
-          <a href="#offres"      role="menuitem" class="nav-link px-4 py-2 text-white/70 hover:text-white font-body font-semibold text-sm rounded-lg hover:bg-white/5 transition-all duration-200">Offres</a>
-          <a href="#partenaires" role="menuitem" class="nav-link px-4 py-2 text-white/70 hover:text-white font-body font-semibold text-sm rounded-lg hover:bg-white/5 transition-all duration-200">Partenaires</a>
-          <a href="#contact"     role="menuitem" class="nav-link px-4 py-2 text-white/70 hover:text-white font-body font-semibold text-sm rounded-lg hover:bg-white/5 transition-all duration-200">Contact</a>
+          <a href="{% url 'home:mission' %}"     role="menuitem" class="nav-link px-4 py-2 font-body font-semibold text-sm rounded-lg transition-all duration-200 {% if request.resolver_match.url_name == 'mission' %}nav-active text-white{% else %}text-white/70 hover:text-white hover:bg-white/5{% endif %}">Notre mission</a>
+          <a href="{% url 'home:parcours' %}"    role="menuitem" class="nav-link px-4 py-2 font-body font-semibold text-sm rounded-lg transition-all duration-200 {% if request.resolver_match.url_name == 'parcours' %}nav-active text-white{% else %}text-white/70 hover:text-white hover:bg-white/5{% endif %}">Parcours</a>
+          <a href="{% url 'home:offres' %}"      role="menuitem" class="nav-link px-4 py-2 font-body font-semibold text-sm rounded-lg transition-all duration-200 {% if request.resolver_match.url_name == 'offres' %}nav-active text-white{% else %}text-white/70 hover:text-white hover:bg-white/5{% endif %}">Offres</a>
+          <a href="{% url 'home:partenaires' %}" role="menuitem" class="nav-link px-4 py-2 font-body font-semibold text-sm rounded-lg transition-all duration-200 {% if request.resolver_match.url_name == 'partenaires' %}nav-active text-white{% else %}text-white/70 hover:text-white hover:bg-white/5{% endif %}">Partenaires</a>
+          <a href="{% url 'home:contact' %}"     role="menuitem" class="nav-link px-4 py-2 font-body font-semibold text-sm rounded-lg transition-all duration-200 {% if request.resolver_match.url_name == 'contact' %}nav-active text-white{% else %}text-white/70 hover:text-white hover:bg-white/5{% endif %}">Contact</a>
         </div>
 
         <div class="flex items-center gap-3">
-          <a href="#contact"
+          <a href="{% url 'home:contact' %}"
              class="hidden sm:inline-flex items-center gap-2 bg-coral hover:bg-red-600 text-white font-heading font-bold text-sm px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-coral hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-caraibe focus-visible:outline-offset-2"
              aria-label="Candidater à ORYGIN Kampus">
             Candidater
@@ -99,13 +99,13 @@
 
       <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 py-4" role="menu" aria-label="Menu mobile">
         <div class="flex flex-col gap-1">
-          <a href="#mission"     role="menuitem" class="px-4 py-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all">Notre mission</a>
-          <a href="#parcours"    role="menuitem" class="px-4 py-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all">Parcours</a>
-          <a href="#offres"      role="menuitem" class="px-4 py-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all">Offres</a>
-          <a href="#partenaires" role="menuitem" class="px-4 py-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all">Partenaires</a>
-          <a href="#contact"     role="menuitem" class="px-4 py-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all">Contact</a>
+          <a href="{% url 'home:mission' %}"     role="menuitem" class="px-4 py-3 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all {% if request.resolver_match.url_name == 'mission' %}text-white bg-white/5{% else %}text-white/80{% endif %}">Notre mission</a>
+          <a href="{% url 'home:parcours' %}"    role="menuitem" class="px-4 py-3 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all {% if request.resolver_match.url_name == 'parcours' %}text-white bg-white/5{% else %}text-white/80{% endif %}">Parcours</a>
+          <a href="{% url 'home:offres' %}"      role="menuitem" class="px-4 py-3 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all {% if request.resolver_match.url_name == 'offres' %}text-white bg-white/5{% else %}text-white/80{% endif %}">Offres</a>
+          <a href="{% url 'home:partenaires' %}" role="menuitem" class="px-4 py-3 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all {% if request.resolver_match.url_name == 'partenaires' %}text-white bg-white/5{% else %}text-white/80{% endif %}">Partenaires</a>
+          <a href="{% url 'home:contact' %}"     role="menuitem" class="px-4 py-3 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all {% if request.resolver_match.url_name == 'contact' %}text-white bg-white/5{% else %}text-white/80{% endif %}">Contact</a>
           <div class="pt-2 px-4">
-            <a href="#contact" class="block text-center bg-coral text-white font-heading font-bold text-sm px-5 py-3 rounded-full hover:bg-red-600 transition-colors">
+            <a href="{% url 'home:contact' %}" class="block text-center bg-coral text-white font-heading font-bold text-sm px-5 py-3 rounded-full hover:bg-red-600 transition-colors">
               Candidater
             </a>
           </div>
@@ -172,12 +172,12 @@
           </h3>
           <nav aria-label="Liens de navigation pied de page">
             <ul class="space-y-2.5">
-              <li><a href="#mission"     class="text-white/60 hover:text-white font-body text-sm transition-colors hover:translate-x-1 inline-block">Notre mission</a></li>
-              <li><a href="#parcours"    class="text-white/60 hover:text-white font-body text-sm transition-colors hover:translate-x-1 inline-block">Nos parcours</a></li>
-              <li><a href="#offres"      class="text-white/60 hover:text-white font-body text-sm transition-colors hover:translate-x-1 inline-block">Nos offres</a></li>
-              <li><a href="#chiffres"    class="text-white/60 hover:text-white font-body text-sm transition-colors hover:translate-x-1 inline-block">Chiffres clés</a></li>
-              <li><a href="#partenaires" class="text-white/60 hover:text-white font-body text-sm transition-colors hover:translate-x-1 inline-block">Partenaires</a></li>
-              <li><a href="#temoignages" class="text-white/60 hover:text-white font-body text-sm transition-colors hover:translate-x-1 inline-block">Témoignages</a></li>
+              <li><a href="{% url 'home:mission' %}"     class="text-white/60 hover:text-white font-body text-sm transition-colors hover:translate-x-1 inline-block">Notre mission</a></li>
+              <li><a href="{% url 'home:parcours' %}"    class="text-white/60 hover:text-white font-body text-sm transition-colors hover:translate-x-1 inline-block">Nos parcours</a></li>
+              <li><a href="{% url 'home:offres' %}"      class="text-white/60 hover:text-white font-body text-sm transition-colors hover:translate-x-1 inline-block">Nos offres</a></li>
+              <li><a href="{% url 'home:partenaires' %}" class="text-white/60 hover:text-white font-body text-sm transition-colors hover:translate-x-1 inline-block">Partenaires</a></li>
+              <li><a href="{% url 'home:partenaires' %}#temoignages" class="text-white/60 hover:text-white font-body text-sm transition-colors hover:translate-x-1 inline-block">Témoignages</a></li>
+              <li><a href="{% url 'home:contact' %}"     class="text-white/60 hover:text-white font-body text-sm transition-colors hover:translate-x-1 inline-block">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -188,11 +188,11 @@
             Programmes
           </h3>
           <ul class="space-y-2.5">
-            <li><a href="#offres"  class="text-white/60 hover:text-caraibe font-body text-sm transition-colors inline-block">Accompagnement à l'emploi</a></li>
-            <li><a href="#offres"  class="text-white/60 hover:text-caraibe font-body text-sm transition-colors inline-block">FLE — Français Langue Étrangère</a></li>
-            <li><a href="#offres"  class="text-white/60 hover:text-caraibe font-body text-sm transition-colors inline-block">Formations supérieures</a></li>
-            <li><a href="#offres"  class="text-white/60 hover:text-caraibe font-body text-sm transition-colors inline-block">Orientation &amp; diagnostic</a></li>
-            <li><a href="#contact" class="text-white/60 hover:text-caraibe font-body text-sm transition-colors inline-block">Candidater</a></li>
+            <li><a href="{% url 'home:offres' %}"   class="text-white/60 hover:text-caraibe font-body text-sm transition-colors inline-block">Accompagnement à l'emploi</a></li>
+            <li><a href="{% url 'home:offres' %}"   class="text-white/60 hover:text-caraibe font-body text-sm transition-colors inline-block">FLE — Français Langue Étrangère</a></li>
+            <li><a href="{% url 'home:offres' %}"   class="text-white/60 hover:text-caraibe font-body text-sm transition-colors inline-block">Formations supérieures</a></li>
+            <li><a href="{% url 'home:parcours' %}" class="text-white/60 hover:text-caraibe font-body text-sm transition-colors inline-block">Orientation &amp; diagnostic</a></li>
+            <li><a href="{% url 'home:contact' %}"  class="text-white/60 hover:text-caraibe font-body text-sm transition-colors inline-block">Candidater</a></li>
           </ul>
         </div>
 

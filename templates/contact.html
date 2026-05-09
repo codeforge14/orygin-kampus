@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Nous contacter — ORYGIN Kampus{% endblock %}
+
+{% block content %}
+
+<section class="bg-orygin-dark pt-36 pb-20 relative overflow-hidden" aria-labelledby="contact-page-heading">
+  <div class="absolute inset-0 opacity-5" aria-hidden="true"
+       style="background: radial-gradient(ellipse 60% 50% at 30% 60%, #FFCC33, transparent), radial-gradient(ellipse 50% 40% at 80% 30%, #F44336, transparent);"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex items-center gap-2 text-white/40 font-body text-sm mb-8" aria-label="Fil d'Ariane">
+      <a href="{% url 'home:home' %}" class="hover:text-white transition-colors">Accueil</a>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <span class="text-white/70">Contact</span>
+    </nav>
+    <div class="grid lg:grid-cols-2 gap-12 items-end">
+      <div>
+        <span class="inline-block font-heading font-semibold text-coral text-sm uppercase tracking-widest mb-4">Parlons de votre projet</span>
+        <h1 id="contact-page-heading" class="font-heading font-black text-white text-5xl sm:text-6xl leading-tight mb-6">
+          Nous sommes<br><span class="text-coral">à votre écoute</span>
+        </h1>
+        <p class="text-white/60 font-body text-xl leading-relaxed">
+          Premier entretien gratuit. Réponse garantie sous 48h ouvrées. Nos conseillers sont disponibles du lundi au vendredi.
+        </p>
+      </div>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+          <svg class="w-6 h-6 text-coral mx-auto mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <p class="font-heading font-bold text-white text-xs">Réponse sous</p>
+          <p class="font-heading font-black text-coral text-lg">48h</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+          <svg class="w-6 h-6 text-nature mx-auto mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <p class="font-heading font-bold text-white text-xs">1er entretien</p>
+          <p class="font-heading font-black text-nature text-lg">Gratuit</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+          <svg class="w-6 h-6 text-solar mx-auto mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <p class="font-heading font-bold text-white text-xs">Antennes</p>
+          <p class="font-heading font-black text-solar text-lg">3</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-24 bg-white" aria-labelledby="formulaire-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16">
+
+      <div class="reveal-left">
+        <span class="inline-block font-heading font-semibold text-coral text-sm uppercase tracking-widest mb-4">Formulaire de contact</span>
+        <h2 id="formulaire-heading" class="font-heading font-black text-orygin-dark text-4xl mb-8">Envoyez-nous un message</h2>
+
+        <form class="space-y-6" novalidate aria-label="Formulaire de contact">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div>
+              <label for="prenom" class="block font-heading font-semibold text-orygin-dark text-sm mb-2">Prénom <span class="text-coral" aria-hidden="true">*</span></label>
+              <input type="text" id="prenom" name="prenom" required autocomplete="given-name"
+                     class="w-full bg-orygin-light border border-orygin-dark/15 rounded-xl px-4 py-3 font-body text-sm text-orygin-dark placeholder-orygin-dark/30 focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/20 transition-all"
+                     placeholder="Votre prénom">
+            </div>
+            <div>
+              <label for="nom" class="block font-heading font-semibold text-orygin-dark text-sm mb-2">Nom <span class="text-coral" aria-hidden="true">*</span></label>
+              <input type="text" id="nom" name="nom" required autocomplete="family-name"
+                     class="w-full bg-orygin-light border border-orygin-dark/15 rounded-xl px-4 py-3 font-body text-sm text-orygin-dark placeholder-orygin-dark/30 focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/20 transition-all"
+                     placeholder="Votre nom">
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block font-heading font-semibold text-orygin-dark text-sm mb-2">Email <span class="text-coral" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email"
+                   class="w-full bg-orygin-light border border-orygin-dark/15 rounded-xl px-4 py-3 font-body text-sm text-orygin-dark placeholder-orygin-dark/30 focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/20 transition-all"
+                   placeholder="votre@email.com">
+          </div>
+
+          <div>
+            <label for="telephone" class="block font-heading font-semibold text-orygin-dark text-sm mb-2">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" autocomplete="tel"
+                   class="w-full bg-orygin-light border border-orygin-dark/15 rounded-xl px-4 py-3 font-body text-sm text-orygin-dark placeholder-orygin-dark/30 focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/20 transition-all"
+                   placeholder="+594 6 94 XX XX XX">
+          </div>
+
+          <div>
+            <label for="sujet" class="block font-heading font-semibold text-orygin-dark text-sm mb-2">Sujet de votre demande <span class="text-coral" aria-hidden="true">*</span></label>
+            <select id="sujet" name="sujet" required
+                    class="w-full bg-orygin-light border border-orygin-dark/15 rounded-xl px-4 py-3 font-body text-sm text-orygin-dark focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/20 transition-all appearance-none">
+              <option value="" disabled selected>Choisissez un sujet</option>
+              <option value="orientation">Orientation &amp; diagnostic professionnel</option>
+              <option value="formation-fle">Formation FLE (Français Langue Étrangère)</option>
+              <option value="formation-sup">Formations supérieures (Bac+2 à Bac+5)</option>
+              <option value="accompagnement">Accompagnement à l'emploi</option>
+              <option value="entrepreneuriat">Création d'entreprise</option>
+              <option value="financement">Questions sur le financement</option>
+              <option value="partenariat">Devenir partenaire employeur</option>
+              <option value="autre">Autre demande</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="antenne" class="block font-heading font-semibold text-orygin-dark text-sm mb-2">Antenne la plus proche</label>
+            <select id="antenne" name="antenne"
+                    class="w-full bg-orygin-light border border-orygin-dark/15 rounded-xl px-4 py-3 font-body text-sm text-orygin-dark focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/20 transition-all appearance-none">
+              <option value="">Indifférent / Je ne sais pas</option>
+              <option value="cayenne">Cayenne (Siège)</option>
+              <option value="saint-laurent">Saint-Laurent-du-Maroni</option>
+              <option value="kourou">Kourou</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block font-heading font-semibold text-orygin-dark text-sm mb-2">Message <span class="text-coral" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required rows="5"
+                      class="w-full bg-orygin-light border border-orygin-dark/15 rounded-xl px-4 py-3 font-body text-sm text-orygin-dark placeholder-orygin-dark/30 focus:outline-none focus:border-coral focus:ring-2 focus:ring-coral/20 transition-all resize-none"
+                      placeholder="Décrivez votre situation et votre projet en quelques mots…"></textarea>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input type="checkbox" id="rgpd" name="rgpd" required class="mt-1 w-4 h-4 accent-coral flex-shrink-0">
+            <label for="rgpd" class="text-orygin-dark/60 font-body text-xs leading-relaxed">
+              J'accepte que mes données soient traitées par ORYGIN Kampus dans le cadre de ma demande de contact, conformément à notre <a href="#" class="text-coral underline hover:no-underline">politique de confidentialité</a>. <span class="text-coral" aria-hidden="true">*</span>
+            </label>
+          </div>
+
+          <button type="submit"
+                  class="w-full inline-flex items-center justify-center gap-3 bg-coral hover:bg-red-600 text-white font-heading font-bold text-base px-8 py-4 rounded-full transition-all hover:shadow-coral hover:scale-[1.02]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Envoyer ma demande
+          </button>
+          <p class="text-orygin-dark/40 font-body text-xs text-center">* Champs obligatoires — Réponse garantie sous 48h ouvrées</p>
+        </form>
+      </div>
+
+      <div class="space-y-8 reveal-right">
+        <div>
+          <span class="inline-block font-heading font-semibold text-caraibe text-sm uppercase tracking-widest mb-4">Informations de contact</span>
+          <h2 class="font-heading font-black text-orygin-dark text-4xl mb-8">Retrouvez-nous</h2>
+        </div>
+
+        <div class="bg-orygin-light rounded-3xl p-8 space-y-5">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-coral/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-coral" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <p class="font-heading font-bold text-orygin-dark text-sm mb-0.5">Siège social — Cayenne</p>
+              <p class="text-orygin-dark/60 font-body text-sm leading-relaxed">
+                Adresse à préciser<br>Cayenne, 97300 Guyane française
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-caraibe/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-caraibe" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <p class="font-heading font-bold text-orygin-dark text-sm mb-0.5">Email</p>
+              <a href="mailto:contact@oryginkampus.fr" class="text-caraibe font-body text-sm hover:underline">contact@oryginkampus.fr</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-nature/10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-nature" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <div>
+              <p class="font-heading font-bold text-orygin-dark text-sm mb-0.5">Téléphone</p>
+              <a href="tel:+594594000000" class="text-nature font-body text-sm hover:underline">+594 594 00 00 00</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-solar/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <p class="font-heading font-bold text-orygin-dark text-sm mb-0.5">Horaires d'ouverture</p>
+              <p class="text-orygin-dark/60 font-body text-sm">Lun – Ven : 8h00 – 17h00<br>Fermé le week-end &amp; jours fériés</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-orygin-dark rounded-3xl p-8">
+          <h3 class="font-heading font-bold text-white text-lg mb-6">Nos antennes</h3>
+          <div class="space-y-4">
+            <div class="bg-white/5 rounded-2xl p-4">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-2 h-2 rounded-full bg-coral flex-shrink-0"></span>
+                <p class="font-heading font-bold text-white text-sm">Cayenne — Siège social</p>
+              </div>
+              <p class="text-white/50 font-body text-xs pl-5">Toutes offres disponibles · Accompagnement, FLE, Formations supérieures</p>
+            </div>
+            <div class="bg-white/5 rounded-2xl p-4">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-2 h-2 rounded-full bg-caraibe flex-shrink-0"></span>
+                <p class="font-heading font-bold text-white text-sm">Saint-Laurent-du-Maroni</p>
+              </div>
+              <p class="text-white/50 font-body text-xs pl-5">Antenne FLE &amp; accompagnement à l'emploi</p>
+            </div>
+            <div class="bg-white/5 rounded-2xl p-4">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="w-2 h-2 rounded-full bg-solar flex-shrink-0"></span>
+                <p class="font-heading font-bold text-white text-sm">Kourou</p>
+              </div>
+              <p class="text-white/50 font-body text-xs pl-5">Point d'accueil &amp; formations numériques</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-24 bg-orygin-light" aria-labelledby="faq-contact-heading">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="inline-block font-heading font-semibold text-solar text-sm uppercase tracking-widest mb-3">Réponses rapides</span>
+      <h2 id="faq-contact-heading" class="font-heading font-black text-orygin-dark text-4xl sm:text-5xl mb-4">Questions fréquentes</h2>
+    </div>
+    <div class="space-y-4 reveal">
+      <details class="group bg-white rounded-2xl p-6 shadow-card cursor-pointer">
+        <summary class="flex items-center justify-between font-heading font-bold text-orygin-dark list-none">
+          Comment se déroule le premier entretien ?
+          <svg class="w-5 h-5 text-orygin-dark/40 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-4 text-orygin-dark/60 font-body leading-relaxed">
+          Le premier entretien dure environ 30 à 45 minutes. Il est réalisé par l'un de nos conseillers et vise à comprendre votre situation actuelle, vos objectifs et vos contraintes. Aucune préparation n'est nécessaire — venez simplement avec votre parcours et vos questions. Il est entièrement gratuit et sans engagement.
+        </p>
+      </details>
+      <details class="group bg-white rounded-2xl p-6 shadow-card cursor-pointer">
+        <summary class="flex items-center justify-between font-heading font-bold text-orygin-dark list-none">
+          Est-il possible de venir sans rendez-vous ?
+          <svg class="w-5 h-5 text-orygin-dark/40 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-4 text-orygin-dark/60 font-body leading-relaxed">
+          Oui, nos accueils sans rendez-vous sont possibles les mardis et jeudis de 9h à 12h au siège de Cayenne. Pour les autres antennes, nous recommandons de prendre rendez-vous au préalable pour garantir la disponibilité d'un conseiller.
+        </p>
+      </details>
+      <details class="group bg-white rounded-2xl p-6 shadow-card cursor-pointer">
+        <summary class="flex items-center justify-between font-heading font-bold text-orygin-dark list-none">
+          Je ne parle pas bien français — pouvez-vous m'accompagner quand même ?
+          <svg class="w-5 h-5 text-orygin-dark/40 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-4 text-orygin-dark/60 font-body leading-relaxed">
+          Absolument. Notre équipe est multilingue et habituée à accueillir des personnes ayant un niveau de français limité. Nous disposons de conseillers parlant portugais, créole et anglais. Le niveau de français n'est pas un frein pour prendre contact avec nous.
+        </p>
+      </details>
+      <details class="group bg-white rounded-2xl p-6 shadow-card cursor-pointer">
+        <summary class="flex items-center justify-between font-heading font-bold text-orygin-dark list-none">
+          J'habite loin de Cayenne, puis-je être accompagné à distance ?
+          <svg class="w-5 h-5 text-orygin-dark/40 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-4 text-orygin-dark/60 font-body leading-relaxed">
+          Oui. Nous proposons des entretiens et des suivis en visioconférence. Certains modules de formation sont également disponibles entièrement à distance. Nos antennes de Saint-Laurent-du-Maroni et Kourou couvrent l'ouest et le centre du territoire.
+        </p>
+      </details>
+      <details class="group bg-white rounded-2xl p-6 shadow-card cursor-pointer">
+        <summary class="flex items-center justify-between font-heading font-bold text-orygin-dark list-none">
+          Je suis une entreprise, comment intégrer vos candidats ?
+          <svg class="w-5 h-5 text-orygin-dark/40 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-4 text-orygin-dark/60 font-body leading-relaxed">
+          Contactez-nous via ce formulaire en sélectionnant "Devenir partenaire employeur". Un chargé de partenariat vous recontactera pour présenter notre réseau, les profils disponibles et les modalités d'accueil (stage, alternance, CDI/CDD).
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
