@@ -103,12 +103,24 @@ def partenaires(request: HttpRequest) -> HttpResponse:
     return render(request, "partenaires.html", context)
 
 
+def qui_sommes_nous(request: HttpRequest) -> HttpResponse:
+    """Render the qui sommes-nous page."""
+    context = {
+        "page_title": "Qui sommes-nous — ORYGIN Kampus",
+        "meta_description": (
+            "ORYGIN Kampus est une SCOP guyanaise engagée dans la formation et l'insertion "
+            "professionnelle depuis 2012. Découvrez notre identité, notre gouvernance et notre équipe."
+        ),
+    }
+    return render(request, "qui_sommes_nous.html", context)
+
+
 def contact(request: HttpRequest) -> HttpResponse:
     """Render the contact page."""
     context = {
         "page_title": "Nous contacter — ORYGIN Kampus",
         "meta_description": (
-            "Contactez ORYGIN Kampus à Cayenne, Saint-Laurent-du-Maroni ou Kourou. "
+            "Contactez ORYGIN Kampus à Cayenne, Mana ou Kourou. "
             "Entretien gratuit, réponse sous 48h."
         ),
     }

@@ -72,6 +72,7 @@
         </a>
 
         <div class="hidden lg:flex items-center gap-1" role="menubar">
+          <a href="{% url 'home:qui_sommes_nous' %}" role="menuitem" class="nav-link px-4 py-2 font-body font-semibold text-sm rounded-lg transition-all duration-200 {% if request.resolver_match.url_name == 'qui_sommes_nous' %}nav-active text-white{% else %}text-white/70 hover:text-white hover:bg-white/5{% endif %}">Qui sommes-nous</a>
           <a href="{% url 'home:mission' %}"     role="menuitem" class="nav-link px-4 py-2 font-body font-semibold text-sm rounded-lg transition-all duration-200 {% if request.resolver_match.url_name == 'mission' %}nav-active text-white{% else %}text-white/70 hover:text-white hover:bg-white/5{% endif %}">Notre mission</a>
           <a href="{% url 'home:parcours' %}"    role="menuitem" class="nav-link px-4 py-2 font-body font-semibold text-sm rounded-lg transition-all duration-200 {% if request.resolver_match.url_name == 'parcours' %}nav-active text-white{% else %}text-white/70 hover:text-white hover:bg-white/5{% endif %}">Parcours</a>
           <a href="{% url 'home:offres' %}"      role="menuitem" class="nav-link px-4 py-2 font-body font-semibold text-sm rounded-lg transition-all duration-200 {% if request.resolver_match.url_name == 'offres' %}nav-active text-white{% else %}text-white/70 hover:text-white hover:bg-white/5{% endif %}">Offres</a>
@@ -105,6 +106,7 @@
 
       <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 py-4" role="menu" aria-label="Menu mobile">
         <div class="flex flex-col gap-1">
+          <a href="{% url 'home:qui_sommes_nous' %}" role="menuitem" class="px-4 py-3 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all {% if request.resolver_match.url_name == 'qui_sommes_nous' %}text-white bg-white/5{% else %}text-white/80{% endif %}">Qui sommes-nous</a>
           <a href="{% url 'home:mission' %}"     role="menuitem" class="px-4 py-3 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all {% if request.resolver_match.url_name == 'mission' %}text-white bg-white/5{% else %}text-white/80{% endif %}">Notre mission</a>
           <a href="{% url 'home:parcours' %}"    role="menuitem" class="px-4 py-3 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all {% if request.resolver_match.url_name == 'parcours' %}text-white bg-white/5{% else %}text-white/80{% endif %}">Parcours</a>
           <a href="{% url 'home:offres' %}"      role="menuitem" class="px-4 py-3 hover:text-white hover:bg-white/5 rounded-lg font-body font-semibold text-sm transition-all {% if request.resolver_match.url_name == 'offres' %}text-white bg-white/5{% else %}text-white/80{% endif %}">Offres</a>
